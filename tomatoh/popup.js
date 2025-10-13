@@ -31674,62 +31674,32 @@ var init_createLucideIcon = __esm({
   }
 });
 
-// node_modules/lucide-react/dist/esm/icons/alarm-clock-check.js
-var __iconNode, AlarmClockCheck;
-var init_alarm_clock_check = __esm({
-  "node_modules/lucide-react/dist/esm/icons/alarm-clock-check.js"() {
-    init_createLucideIcon();
-    __iconNode = [
-      ["circle", { cx: "12", cy: "13", r: "8", key: "3y4lt7" }],
-      ["path", { d: "M5 3 2 6", key: "18tl5t" }],
-      ["path", { d: "m22 6-3-3", key: "1opdir" }],
-      ["path", { d: "M6.38 18.7 4 21", key: "17xu3x" }],
-      ["path", { d: "M17.64 18.67 20 21", key: "kv2oe2" }],
-      ["path", { d: "m9 13 2 2 4-4", key: "6343dt" }]
-    ];
-    AlarmClockCheck = createLucideIcon("alarm-clock-check", __iconNode);
-  }
-});
-
 // node_modules/lucide-react/dist/esm/icons/chevron-left.js
-var __iconNode2, ChevronLeft;
+var __iconNode, ChevronLeft;
 var init_chevron_left = __esm({
   "node_modules/lucide-react/dist/esm/icons/chevron-left.js"() {
     init_createLucideIcon();
-    __iconNode2 = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
-    ChevronLeft = createLucideIcon("chevron-left", __iconNode2);
+    __iconNode = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
+    ChevronLeft = createLucideIcon("chevron-left", __iconNode);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/chevron-right.js
-var __iconNode3, ChevronRight;
+var __iconNode2, ChevronRight;
 var init_chevron_right = __esm({
   "node_modules/lucide-react/dist/esm/icons/chevron-right.js"() {
     init_createLucideIcon();
-    __iconNode3 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-    ChevronRight = createLucideIcon("chevron-right", __iconNode3);
-  }
-});
-
-// node_modules/lucide-react/dist/esm/icons/clock.js
-var __iconNode4, Clock;
-var init_clock = __esm({
-  "node_modules/lucide-react/dist/esm/icons/clock.js"() {
-    init_createLucideIcon();
-    __iconNode4 = [
-      ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }],
-      ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
-    ];
-    Clock = createLucideIcon("clock", __iconNode4);
+    __iconNode2 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+    ChevronRight = createLucideIcon("chevron-right", __iconNode2);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/file-json.js
-var __iconNode5, FileJson;
+var __iconNode3, FileJson;
 var init_file_json = __esm({
   "node_modules/lucide-react/dist/esm/icons/file-json.js"() {
     init_createLucideIcon();
-    __iconNode5 = [
+    __iconNode3 = [
       ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
       ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
       [
@@ -31741,35 +31711,16 @@ var init_file_json = __esm({
         { d: "M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1", key: "mpwhp6" }
       ]
     ];
-    FileJson = createLucideIcon("file-json", __iconNode5);
-  }
-});
-
-// node_modules/lucide-react/dist/esm/icons/leaf.js
-var __iconNode6, Leaf;
-var init_leaf = __esm({
-  "node_modules/lucide-react/dist/esm/icons/leaf.js"() {
-    init_createLucideIcon();
-    __iconNode6 = [
-      [
-        "path",
-        {
-          d: "M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z",
-          key: "nnexq3"
-        }
-      ],
-      ["path", { d: "M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12", key: "mt58a7" }]
-    ];
-    Leaf = createLucideIcon("leaf", __iconNode6);
+    FileJson = createLucideIcon("file-json", __iconNode3);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/play.js
-var __iconNode7, Play;
+var __iconNode4, Play;
 var init_play = __esm({
   "node_modules/lucide-react/dist/esm/icons/play.js"() {
     init_createLucideIcon();
-    __iconNode7 = [
+    __iconNode4 = [
       [
         "path",
         {
@@ -31778,49 +31729,32 @@ var init_play = __esm({
         }
       ]
     ];
-    Play = createLucideIcon("play", __iconNode7);
-  }
-});
-
-// node_modules/lucide-react/dist/esm/icons/plus.js
-var __iconNode8, Plus;
-var init_plus = __esm({
-  "node_modules/lucide-react/dist/esm/icons/plus.js"() {
-    init_createLucideIcon();
-    __iconNode8 = [
-      ["path", { d: "M5 12h14", key: "1ays0h" }],
-      ["path", { d: "M12 5v14", key: "s699le" }]
-    ];
-    Plus = createLucideIcon("plus", __iconNode8);
+    Play = createLucideIcon("play", __iconNode4);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/refresh-ccw.js
-var __iconNode9, RefreshCcw;
+var __iconNode5, RefreshCcw;
 var init_refresh_ccw = __esm({
   "node_modules/lucide-react/dist/esm/icons/refresh-ccw.js"() {
     init_createLucideIcon();
-    __iconNode9 = [
+    __iconNode5 = [
       ["path", { d: "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "14sxne" }],
       ["path", { d: "M3 3v5h5", key: "1xhq8a" }],
       ["path", { d: "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16", key: "1hlbsb" }],
       ["path", { d: "M16 16h5v5", key: "ccwih5" }]
     ];
-    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode9);
+    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode5);
   }
 });
 
 // node_modules/lucide-react/dist/esm/lucide-react.js
 var init_lucide_react = __esm({
   "node_modules/lucide-react/dist/esm/lucide-react.js"() {
-    init_alarm_clock_check();
     init_chevron_left();
     init_chevron_right();
-    init_clock();
     init_file_json();
-    init_leaf();
     init_play();
-    init_plus();
     init_refresh_ccw();
   }
 });
@@ -31836,7 +31770,7 @@ var init_utils6 = __esm({
 });
 
 // src/components/ui/card.tsx
-var React4, import_jsx_runtime6, Card, CardHeader, CardTitle, CardContent;
+var React4, import_jsx_runtime6, Card, CardHeader, CardTitle, CardDescription, CardContent;
 var init_card = __esm({
   "src/components/ui/card.tsx"() {
     "use strict";
@@ -31849,6 +31783,10 @@ var init_card = __esm({
     Card.displayName = "Card";
     CardHeader = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: cn("flex flex-col gap-3", className), ...props });
     CardTitle = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { className: cn("pin-title", className), ...props });
+    CardDescription = ({
+      className,
+      ...props
+    }) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: cn("pin-subtle", className), ...props });
     CardContent = ({ className, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: cn("flex flex-col gap-4", className), ...props });
   }
 });
@@ -31904,68 +31842,66 @@ function AccomplishmentList({
   status,
   celebration
 }) {
+  const textareaRef = (0, import_react26.useRef)(null);
+  (0, import_react26.useEffect)(() => {
+    textareaRef.current?.focus();
+  }, []);
   return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
     motion.div,
     {
       layout: true,
-      initial: { opacity: 0, y: 28 },
+      initial: { opacity: 0, y: 24 },
       animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.45 },
+      transition: { duration: 0.35 },
       className: "stagger-offset",
       children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Card, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CardHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CardTitle, { children: "today\u2019s wins" }) }),
         /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(CardContent, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "entries-stack", children: entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "pin-empty", children: "no pins yet \u2014 drop your latest win below." }) : entries.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
-            motion.article,
-            {
-              initial: { opacity: 0, y: 18 },
-              animate: { opacity: 1, y: 0 },
-              transition: { duration: 0.35 },
-              className: "entry-card",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "entry-time", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Clock, { className: "h-4 w-4", "aria-hidden": true }),
-                  new Date(entry.timestamp).toLocaleTimeString([], {
-                    hour: "numeric",
-                    minute: "2-digit"
-                  })
-                ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "entry-note", children: entry.note })
-              ]
-            },
-            entry.timestamp
-          )) }),
           /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "input-group", children: [
             /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
               Textarea,
               {
                 id: "highlight",
-                placeholder: "write one lingering win\u2026",
+                placeholder: "write something\u2026\u270D\uFE0F\u270D\uFE0F\u270D\uFE0F",
                 value: draft,
                 rows: 3,
+                ref: textareaRef,
                 onChange: (event) => onDraftChange(event.target.value)
               }
             ),
             /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "cta-row", children: [
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "status-text", children: status }),
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Plus, { className: "h-4 w-4", "aria-hidden": true }),
-                saving ? "saving\u2026" : "save win"
-              ] })
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F4DD} logging\u2026" : "\u{1F4DD} log event" })
             ] })
-          ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "entries-stack", children: entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "pin-empty", children: "no pins yet" }) : entries.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
+            motion.article,
+            {
+              initial: { opacity: 0, y: 14 },
+              animate: { opacity: 1, y: 0 },
+              transition: { duration: 0.25 },
+              className: "entry-card",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "entry-time", children: new Date(entry.timestamp).toLocaleTimeString([], {
+                  hour: "numeric",
+                  minute: "2-digit"
+                }) }),
+                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "entry-note", children: entry.note })
+              ]
+            },
+            entry.timestamp
+          )) })
         ] }),
-        celebration ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(motion.div, { className: "confetti-burst", children: "\u{1F33F} \u2728 \u{1F345}" }) : null
+        celebration ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(motion.div, { className: "confetti-burst", children: "\u2728\u2728\u2728\u2728\u2728" }) : null
       ] })
     }
   );
 }
-var import_jsx_runtime9;
+var import_react26, import_jsx_runtime9;
 var init_AccomplishmentList = __esm({
   "src/components/AccomplishmentList.tsx"() {
     "use strict";
+    import_react26 = __toESM(require_react());
     init_es3();
-    init_lucide_react();
     init_card();
     init_button();
     init_textarea();
@@ -32007,7 +31943,10 @@ function ReminderSettings({
       transition: { duration: 0.45, delay: 0.08 },
       className: "stagger-offset",
       children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Card, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(CardHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(CardTitle, { children: "\u23F2\uFE0F reminders" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(CardHeader, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(CardTitle, { children: "\u23F2\uFE0F reminders" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(CardDescription, { children: "choose how often the bell nudges you" })
+        ] }),
         /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(CardContent, { children: [
           /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "input-group", children: [
             /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("label", { htmlFor: "interval", className: "pin-label", children: "minutes between nudges" }),
@@ -32024,10 +31963,7 @@ function ReminderSettings({
             ),
             /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "cta-row", children: [
               /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "status-text", children: status }),
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(AlarmClockCheck, { className: "h-4 w-4", "aria-hidden": true }),
-                saving ? "\u{1F9ED} saving\u2026" : "\u{1F9ED} save interval"
-              ] })
+              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F9ED} saving\u2026" : "\u{1F9ED} save interval" })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "soft-banner", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-center justify-between gap-3", children: [
@@ -32066,7 +32002,10 @@ function ExportButtons({ onExportJson, onExportCsv, onReset, busy }) {
       transition: { duration: 0.45, delay: 0.16 },
       className: "stagger-offset",
       children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Card, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardTitle, { children: "exports + reset" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(CardHeader, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardTitle, { children: "exports + reset" }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardDescription, { children: "download the day\u2019s notes or clear the slate." })
+        ] }),
         /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "button-stack", children: [
           /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Button, { variant: "secondary", onClick: onExportJson, disabled: busy, children: [
             /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(FileJson, { className: "h-4 w-4", "aria-hidden": true }),
@@ -32102,17 +32041,17 @@ function todayKey() {
   return (/* @__PURE__ */ new Date()).toISOString().split("T")[0];
 }
 function App() {
-  const [entries, setEntries] = (0, import_react26.useState)([]);
-  const [draft, setDraft] = (0, import_react26.useState)("");
-  const [intervalMinutes, setIntervalMinutes] = (0, import_react26.useState)(15);
-  const [saveStatus, setSaveStatus] = (0, import_react26.useState)(null);
-  const [intervalStatus, setIntervalStatus] = (0, import_react26.useState)(null);
-  const [exportBusy, setExportBusy] = (0, import_react26.useState)(false);
-  const [nextReminder, setNextReminder] = (0, import_react26.useState)("loading reminder schedule\u2026");
-  const [savingEntry, setSavingEntry] = (0, import_react26.useState)(false);
-  const [savingInterval, setSavingInterval] = (0, import_react26.useState)(false);
-  const [celebration, setCelebration] = (0, import_react26.useState)(false);
-  const [step, setStep] = (0, import_react26.useState)(0);
+  const [entries, setEntries] = (0, import_react27.useState)([]);
+  const [draft, setDraft] = (0, import_react27.useState)("");
+  const [intervalMinutes, setIntervalMinutes] = (0, import_react27.useState)(15);
+  const [saveStatus, setSaveStatus] = (0, import_react27.useState)(null);
+  const [intervalStatus, setIntervalStatus] = (0, import_react27.useState)(null);
+  const [exportBusy, setExportBusy] = (0, import_react27.useState)(false);
+  const [nextReminder, setNextReminder] = (0, import_react27.useState)("loading reminder schedule\u2026");
+  const [savingEntry, setSavingEntry] = (0, import_react27.useState)(false);
+  const [savingInterval, setSavingInterval] = (0, import_react27.useState)(false);
+  const [celebration, setCelebration] = (0, import_react27.useState)(false);
+  const [step, setStep] = (0, import_react27.useState)(0);
   const loadEntries = async () => {
     const key = todayKey();
     const { entries: storedEntries = {} } = await storageGet([
@@ -32147,9 +32086,9 @@ function App() {
       hour: "numeric",
       minute: "2-digit"
     });
-    setNextReminder(`next nudge in ${minutes}m ${seconds}s \xB7 about ${readable}`);
+    setNextReminder(`next in ${minutes}m ${seconds}s \xB7 about ${readable}`);
   };
-  (0, import_react26.useEffect)(() => {
+  (0, import_react27.useEffect)(() => {
     loadEntries();
     loadInterval();
     refreshNextReminder();
@@ -32172,7 +32111,7 @@ function App() {
   const handleSaveEntry = async () => {
     const note = draft.trim();
     if (!note) {
-      setSaveStatus("please jot a tiny win first");
+      setSaveStatus("write smth!");
       return;
     }
     setSavingEntry(true);
@@ -32247,7 +32186,7 @@ function App() {
   const handleOpenReminder = async () => {
     await sendMessage({ type: "openReminder" });
   };
-  const todaysEntries = (0, import_react26.useMemo)(() => entries, [entries]);
+  const todaysEntries = (0, import_react27.useMemo)(() => entries, [entries]);
   const panes = [
     /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
       AccomplishmentList,
@@ -32290,14 +32229,9 @@ function App() {
   const goNext = () => setStep((prev) => Math.min(prev + 1, maxStep));
   const goPrev = () => setStep((prev) => Math.max(prev - 1, 0));
   return /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "layout font-sans text-ink", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "floating-badge", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { children: "\u{1F345}" }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { children: "pin mode" })
-    ] }),
     /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("header", { className: "header-block", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Leaf, { className: "accent h-8 w-8", "aria-hidden": true }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h1", { children: "\u{1F33F} accomplishment reminder" }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: "gentle lowercase nudges to notice what you just accomplished." })
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h1", { children: "\u{1F345} tomatoh" }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: "notice and account your tasks" })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "pin-grid", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(AnimatePresence, { mode: "wait", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
       motion.div,
@@ -32322,7 +32256,20 @@ function App() {
           children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(ChevronLeft, { className: "h-5 w-5", "aria-hidden": true })
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "nav-dots", children: panes.map((_, index) => /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: index === step ? "nav-dot nav-dot-active" : "nav-dot" }, index)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "nav-items", children: navItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
+        "button",
+        {
+          type: "button",
+          className: index === step ? "nav-item nav-item-active" : "nav-item",
+          onClick: () => setStep(index),
+          "aria-label": item.label,
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-icon", "aria-hidden": true, children: item.icon }),
+            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-label", children: item.label })
+          ]
+        },
+        item.id
+      )) }),
       /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
         "button",
         {
@@ -32346,11 +32293,11 @@ function triggerDownload(filename, content, mime) {
   anchor.click();
   URL.revokeObjectURL(url);
 }
-var import_react26, import_jsx_runtime13, chromeApi, storageGet, sendMessage, getAlarm, ALARM_NAME;
+var import_react27, import_jsx_runtime13, chromeApi, storageGet, sendMessage, getAlarm, ALARM_NAME, navItems;
 var init_App = __esm({
   "src/popup/App.tsx"() {
     "use strict";
-    import_react26 = __toESM(require_react());
+    import_react27 = __toESM(require_react());
     init_es3();
     init_lucide_react();
     init_AccomplishmentList();
@@ -32371,13 +32318,18 @@ var init_App = __esm({
       chromeApi.alarms.get(name, (alarm) => resolve(alarm ?? void 0));
     });
     ALARM_NAME = "accomplishment-reminder";
+    navItems = [
+      { id: 0, icon: "\u{1F4DD}", label: "wins" },
+      { id: 1, icon: "\u23F1", label: "reminders" },
+      { id: 2, icon: "\u{1F4E4}", label: "exports" }
+    ];
   }
 });
 
 // src/popup/index.tsx
 var require_index = __commonJS({
   "src/popup/index.tsx"() {
-    var import_react27 = __toESM(require_react());
+    var import_react28 = __toESM(require_react());
     var import_client = __toESM(require_client());
     init_App();
     var import_jsx_runtime14 = __toESM(require_jsx_runtime());
@@ -32451,14 +32403,10 @@ lucide-react/dist/esm/shared/src/utils.js:
 lucide-react/dist/esm/defaultAttributes.js:
 lucide-react/dist/esm/Icon.js:
 lucide-react/dist/esm/createLucideIcon.js:
-lucide-react/dist/esm/icons/alarm-clock-check.js:
 lucide-react/dist/esm/icons/chevron-left.js:
 lucide-react/dist/esm/icons/chevron-right.js:
-lucide-react/dist/esm/icons/clock.js:
 lucide-react/dist/esm/icons/file-json.js:
-lucide-react/dist/esm/icons/leaf.js:
 lucide-react/dist/esm/icons/play.js:
-lucide-react/dist/esm/icons/plus.js:
 lucide-react/dist/esm/icons/refresh-ccw.js:
 lucide-react/dist/esm/lucide-react.js:
   (**

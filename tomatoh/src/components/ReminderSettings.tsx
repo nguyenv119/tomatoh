@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { AlarmClockCheck, Play } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
@@ -34,6 +34,9 @@ export function ReminderSettings({
       <Card>
         <CardHeader>
           <CardTitle>⏲️ reminders</CardTitle>
+          <CardDescription>
+            choose how often the bell nudges you
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="input-group">
@@ -51,7 +54,6 @@ export function ReminderSettings({
             <div className="cta-row">
               <span className="status-text">{status}</span>
               <Button onClick={onSave} disabled={saving} className="btn-sm">
-                <AlarmClockCheck className="h-4 w-4" aria-hidden />
                 {saving ? "🧭 saving…" : "🧭 save interval"}
               </Button>
             </div>

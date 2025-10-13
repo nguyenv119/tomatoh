@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { RefreshCcw, FileJson } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 
 interface ExportButtonsProps {
@@ -22,6 +22,9 @@ export function ExportButtons({ onExportJson, onExportCsv, onReset, busy }: Expo
       <Card>
         <CardHeader>
           <CardTitle>exports + reset</CardTitle>
+          <CardDescription>
+            download the day’s notes or clear the slate.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="button-stack">

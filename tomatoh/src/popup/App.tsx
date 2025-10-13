@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Leaf } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AccomplishmentList, type AccomplishmentEntry } from "../components/AccomplishmentList";
 import { ReminderSettings } from "../components/ReminderSettings";
 import { ExportButtons } from "../components/ExportButtons";
@@ -39,6 +39,12 @@ const ALARM_NAME = "accomplishment-reminder";
 function todayKey() {
   return new Date().toISOString().split("T")[0];
 }
+
+const navItems = [
+  { id: 0, icon: "📝", label: "wins" },
+  { id: 1, icon: "⏱", label: "reminders" },
+  { id: 2, icon: "📤", label: "exports" }
+];
 
 export function App() {
   const [entries, setEntries] = useState<AccomplishmentEntry[]>([]);
@@ -91,7 +97,7 @@ export function App() {
       hour: "numeric",
       minute: "2-digit"
     });
-    setNextReminder(`next nudge in ${minutes}m ${seconds}s · about ${readable}`);
+    setNextReminder(`next in ${minutes}m ${seconds}s · about ${readable}`);
   };
 
   type StorageListener = Parameters<typeof chromeApi.storage.onChanged.addListener>[0];
@@ -123,7 +129,7 @@ export function App() {
   const handleSaveEntry = async () => {
     const note = draft.trim();
     if (!note) {
-      setSaveStatus("please jot a tiny win first");
+      setSaveStatus("write smth!");
       return;
     }
     setSavingEntry(true);
@@ -209,7 +215,7 @@ export function App() {
   const panes = [
     (
       <AccomplishmentList
-        key="wins"
+        key="logs"
         entries={todaysEntries}
         draft={draft}
         onDraftChange={setDraft}
@@ -249,14 +255,9 @@ export function App() {
 
   return (
     <div className="layout font-sans text-ink">
-      <div className="floating-badge">
-        <span>🍅</span>
-        <span>pin mode</span>
-      </div>
       <header className="header-block">
-        <Leaf className="accent h-8 w-8" aria-hidden />
-        <h1>🌿 accomplishment reminder</h1>
-        <p>gentle lowercase nudges to notice what you just accomplished.</p>
+        <h1>🍅 tomatoh</h1>
+        <p>notice and account your tasks</p>
       </header>
       <div className="pin-grid">
         <AnimatePresence mode="wait">
@@ -281,9 +282,20 @@ export function App() {
         >
           <ChevronLeft className="h-5 w-5" aria-hidden />
         </button>
-        <div className="nav-dots">
-          {panes.map((_, index) => (
-            <span key={index} className={index === step ? "nav-dot nav-dot-active" : "nav-dot"} />
+        <div className="nav-items">
+          {navItems.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              className={index === step ? "nav-item nav-item-active" : "nav-item"}
+              onClick={() => setStep(index)}
+              aria-label={item.label}
+            >
+              <span className="nav-icon" aria-hidden>
+                {item.icon}
+              </span>
+              <span className="nav-label">{item.label}</span>
+            </button>
           ))}
         </div>
         <button

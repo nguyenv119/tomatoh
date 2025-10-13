@@ -8,6 +8,7 @@
   --accent: #000000;
   --accent-soft: rgba(0, 0, 0, 0.06);
   --badge: rgba(0, 0, 0, 0.08);
+  --gray: #e5e5e5
   font-family: "Inter", "Segoe UI", system-ui, sans-serif;
 }
 
@@ -95,7 +96,7 @@ body {
 
 .pin-grid {
   display: grid;
-  gap: 24px;
+  /* gap: 24px; */
 }
 
 .stagger-offset:nth-child(2n) {
@@ -104,23 +105,16 @@ body {
 
 .pin-card {
   position: relative;
-  padding: 22px 24px;
   border-radius: 1rem;
   background: var(--paper);
-  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 18px;
   transition: transform 150ms ease, border-color 150ms ease;
 }
 
-.pin-card:hover {
-  transform: scale(1.01);
-  border-color: var(--border-strong);
-}
-
 .pin-title {
-  margin: 0;
+  margin: 10px 10px;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -139,16 +133,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin: 10px;
 }
 
 .entry-card {
   border-radius: 0.9rem;
   border: 1px solid var(--border);
   background: rgba(249, 249, 249, 0.82);
-  padding: 12px 14px;
+  padding: 15px 15px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .entry-time {
@@ -159,11 +153,9 @@ body {
   text-transform: lowercase;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
 }
 
 .entry-note {
-  margin: 0;
   font-size: 0.95rem;
   letter-spacing: -0.005em;
 }
@@ -178,7 +170,7 @@ body {
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  padding: 10px;
 }
 
 .pin-label {
@@ -201,22 +193,20 @@ body {
   padding: 12px 16px;
   font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.95);
-  color: var(--ink);
+  /* color: var(--ink); */
   text-transform: lowercase;
   transition: border-color 140ms ease, box-shadow 140ms ease;
 }
 
 .pin-input:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 .pin-textarea {
-  min-height: 96px;
   border-radius: 0.9rem;
   border: 1px solid var(--border);
-  padding: 14px 16px;
+  padding: 15px;
   font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.95);
   color: var(--ink);
@@ -227,21 +217,22 @@ body {
 
 .pin-textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  border-color: inherit;
+  box-shadow: none;
 }
 
 .cta-row {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  margin-top: 10px;
 }
 
 .status-text {
   font-size: 0.78rem;
   color: var(--muted);
   min-height: 1.1rem;
+  margin-right: 10px;
   text-transform: lowercase;
 }
 
@@ -263,7 +254,8 @@ body {
 .btn-default {
   background: var(--paper);
   color: var(--ink);
-  border-color: var(--ink);
+  border-color: var(--gray);
+  border-width: 0.3px;
 }
 
 .btn-default:hover {
@@ -309,7 +301,6 @@ body {
 .btn-destructive {
   background: rgba(9, 9, 9, 0.06);
   color: rgba(9, 9, 9, 0.76);
-  border-color: rgba(9, 9, 9, 0.12);
 }
 
 .btn:disabled {
@@ -334,11 +325,18 @@ body {
 }
 
 .pagination-bar {
-  margin-top: 8px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
+  padding: 10px 14px;
+  background: var(--paper);
+  border-top: 1px solid var(--border);
+  z-index: 1000;
 }
 
 .nav-btn {
@@ -365,33 +363,57 @@ body {
   cursor: not-allowed;
 }
 
-.nav-dots {
+.nav-items {
   display: inline-flex;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
 }
 
-.nav-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.12);
-  transition: transform 140ms ease, background 140ms ease;
+.nav-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 140ms ease, border-color 140ms ease, color 140ms ease;
 }
 
-.nav-dot-active {
-  background: rgba(0, 0, 0, 0.85);
-  transform: scale(1.15);
+.nav-item:hover {
+  transform: translateY(-1px);
+  border-color: var(--border);
+  color: var(--ink);
+}
+
+.nav-item-active {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.nav-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.nav-label {
+  font-size: 0.7rem;
+  text-transform: lowercase;
 }
 
 .soft-banner {
   border-radius: 1rem;
   border: 1px dashed var(--border);
-  padding: 14px 18px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  background: rgba(249, 249, 249, 0.8);
+  gap: 10px;
+  background: rgba(249, 249, 249, 0.85);
 }
 
 .pin-bullet {
@@ -409,7 +431,7 @@ body {
 
 .confetti-burst {
   position: absolute;
-  top: -12px;
+  top: -20px;
   right: 20px;
   font-size: 1.15rem;
 }

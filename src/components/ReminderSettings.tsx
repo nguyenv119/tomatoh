@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { AlarmClockCheck, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";

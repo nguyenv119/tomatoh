@@ -32199,7 +32199,7 @@ function App() {
         status: saveStatus,
         celebration
       },
-      "wins"
+      "logs"
     ),
     /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
       ReminderSettings,

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/popup/index.tsx --bundle --format=esm --sourcemap --target=es2020 --outfile=popup.js && esbuild src/reminder/index.tsx --bundle --format=esm --sourcemap --target=es2020 --outfile=reminder.js",
+    "build": "mkdir -p dist && esbuild src/popup/index.tsx --bundle --format=esm --sourcemap --target=es2020 --outfile=dist/popup.js && esbuild src/reminder/index.tsx --bundle --format=esm --sourcemap --target=es2020 --outfile=dist/reminder.js",
     "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "keywords": [],

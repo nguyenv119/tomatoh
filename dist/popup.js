@@ -32319,7 +32319,7 @@ var init_App = __esm({
     });
     ALARM_NAME = "accomplishment-reminder";
     navItems = [
-      { id: 0, icon: "\u{1F4DD}", label: "wins" },
+      { id: 0, icon: "\u{1F4DD}", label: "log" },
       { id: 1, icon: "\u23F1", label: "reminders" },
       { id: 2, icon: "\u{1F4E4}", label: "exports" }
     ];

@@ -41,7 +41,7 @@ function todayKey() {
 }
 
 const navItems = [
-  { id: 0, icon: "📝", label: "wins" },
+  { id: 0, icon: "📝", label: "log" },
   { id: 1, icon: "⏱", label: "reminders" },
   { id: 2, icon: "📤", label: "exports" }
 ];

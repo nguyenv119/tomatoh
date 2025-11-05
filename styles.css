@@ -346,24 +346,10 @@ header-title {
 
 .btn-ghost {
   background: transparent;
-  color: rgba(9, 9, 9, 0.6);
+  color: var(--muted);
   border-color: transparent;
 }
-
-.btn-ghost:hover {
-  color: var(--ink);
-  transform: translateY(-1px);
-}
-
-.btn-ghost:active {
-  transform: translateY(1px);
-}
-
-.btn-destructive {
-  background: rgba(9, 9, 9, 0.06);
-  color: rgba(9, 9, 9, 0.76);
-}
-
+  
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -416,7 +402,7 @@ header-title {
 
 .nav-btn:hover:not(:disabled) {
   transform: translateY(-1px);
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--accent-soft);
 }
 
 .nav-btn:disabled {

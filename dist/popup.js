@@ -32009,7 +32009,14 @@ function ReminderSettings({
           /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "soft-banner", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-center justify-between gap-3", children: [
             /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "pin-timestamp", children: nextReminder }),
             /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Button, { variant: "ghost", onClick: onOpenReminder, className: "btn-sm", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Play, { className: "h-4 w-4", "aria-hidden": true }),
+              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+                Play,
+                {
+                  className: "h-4 w-4",
+                  style: { color: "var(--ink)" },
+                  "aria-hidden": true
+                }
+              ),
               "open reminder now"
             ] })
           ] }) })

@@ -62,7 +62,10 @@ export function ReminderSettings({
             <div className="flex items-center justify-between gap-3">
               <span className="pin-timestamp">{nextReminder}</span>
               <Button variant="ghost" onClick={onOpenReminder} className="btn-sm">
-                <Play className="h-4 w-4" aria-hidden />
+                <Play 
+                className="h-4 w-4"
+                style={{ color: "var(--ink)" }}
+                aria-hidden />
                 open reminder now
               </Button>
             </div>

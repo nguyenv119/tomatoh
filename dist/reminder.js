@@ -21776,6 +21776,23 @@ function ReminderApp() {
   const [note, setNote] = (0, import_react.useState)("");
   const [status, setStatus] = (0, import_react.useState)(null);
   const [saving, setSaving] = (0, import_react.useState)(false);
+  (0, import_react.useEffect)(() => {
+    const loadDarkMode = async () => {
+      if (chromeApi?.storage?.local) {
+        const result = await storageGet(["darkMode"]);
+        if (result.darkMode !== void 0) {
+          document.documentElement.classList.toggle("dark", result.darkMode);
+        }
+      } else {
+        const saved = localStorage.getItem("darkMode");
+        if (saved !== null) {
+          const isDark = saved === "true";
+          document.documentElement.classList.toggle("dark", isDark);
+        }
+      }
+    };
+    loadDarkMode();
+  }, []);
   const handleSave = async (event) => {
     event.preventDefault();
     if (!note.trim()) {
@@ -21784,6 +21801,11 @@ function ReminderApp() {
     }
     setSaving(true);
     setStatus("saving\u2026");
+    if (!chromeApi?.runtime?.sendMessage) {
+      setStatus("chrome api unavailable");
+      setSaving(false);
+      return;
+    }
     const response = await chromeApi.runtime.sendMessage({
       type: "saveAccomplishment",
       items: [note.trim()]
@@ -21818,7 +21840,7 @@ function ReminderApp() {
     ] })
   ] }) });
 }
-var import_react, import_jsx_runtime3, chromeApi;
+var import_react, import_jsx_runtime3, chromeApi, storageGet;
 var init_App = __esm({
   "src/reminder/App.tsx"() {
     "use strict";
@@ -21827,9 +21849,13 @@ var init_App = __esm({
     init_textarea();
     import_jsx_runtime3 = __toESM(require_jsx_runtime());
     chromeApi = globalThis.chrome;
-    if (!chromeApi) {
-      throw new Error("chrome api unavailable");
-    }
+    storageGet = (keys) => new Promise((resolve) => {
+      if (!chromeApi?.storage?.local) {
+        resolve({});
+        return;
+      }
+      chromeApi.storage.local.get(keys ?? null, (result) => resolve(result));
+    });
   }
 });
 

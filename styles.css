@@ -422,10 +422,9 @@ header-title {
   align-items: center;
   gap: 4px;
   padding: 6px 12px;
-  border-radius: 14px;
   border: 1px solid transparent;
   background: transparent;
-  color: rgba(0, 0, 0, 0.55);
+  color: var(--muted);
   font-size: 0.72rem;
   letter-spacing: 0.02em;
   cursor: pointer;
@@ -433,14 +432,11 @@ header-title {
 }
 
 .nav-item:hover {
-  transform: translateY(-1px);
-  border-color: var(--border);
-  color: var(--ink);
+  transform: translateY(-3px);
 }
 
 .nav-item-active {
   color: var(--ink);
-  border-color: var(--ink);
 }
 
 .nav-icon {

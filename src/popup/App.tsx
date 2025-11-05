@@ -1,53 +1,23 @@
-/// <reference types="chrome" />
-
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Sun, Moon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
+import { ReminderSettings } from "../components/ReminderSettings";
+import { ExportButtons } from "../components/ExportButtons";
+import {
+  chromeApi,
+  storageGet,
+  sendMessage,
+  getAlarm,
+  todayKey,
+  ALARM_NAME,
+  type EntriesByDay,
+  triggerDownload,
+} from "../lib/chrome";
+import { useDarkMode } from "../lib/useDarkMode";
 import {
   AccomplishmentList,
   type AccomplishmentEntry,
 } from "../components/AccomplishmentList";
-import { ReminderSettings } from "../components/ReminderSettings";
-import { ExportButtons } from "../components/ExportButtons";
-
-const chromeApi = globalThis.chrome;
-
-type EntriesByDay = Record<string, AccomplishmentEntry[]>;
-
-const storageGet = <T,>(keys?: string[]): Promise<T> =>
-  new Promise((resolve) => {
-    if (!chromeApi?.storage?.local) {
-      resolve({} as T);
-      return;
-    }
-    chromeApi.storage.local.get(keys ?? null, (result) => resolve(result as T));
-  });
-
-const sendMessage = <T,>(message: unknown): Promise<T> =>
-  new Promise((resolve) => {
-    if (!chromeApi?.runtime?.sendMessage) {
-      resolve({ success: false } as T);
-      return;
-    }
-    chromeApi.runtime.sendMessage(message, (response: T) => resolve(response));
-  });
-
-type ChromeAlarm = { scheduledTime?: number };
-
-const getAlarm = (name: string): Promise<ChromeAlarm | undefined> =>
-  new Promise((resolve) => {
-    if (!chromeApi?.alarms?.get) {
-      resolve(undefined);
-      return;
-    }
-    chromeApi.alarms.get(name, (alarm) => resolve(alarm ?? undefined));
-  });
-
-const ALARM_NAME = "accomplishment-reminder";
-
-function todayKey() {
-  return new Date().toISOString().split("T")[0];
-}
 
 const navItems = [
   { id: 0, icon: "📝", label: "log" },
@@ -69,7 +39,7 @@ export function App() {
   const [savingInterval, setSavingInterval] = useState(false);
   const [celebration, setCelebration] = useState(false);
   const [step, setStep] = useState(0);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode({ listenToStorage: true });
 
   const loadEntries = async () => {
     const key = todayKey();
@@ -118,53 +88,19 @@ export function App() {
   };
 
   useEffect(() => {
-    const loadDarkMode = async () => {
-      if (chromeApi?.storage?.local) {
-        const result = await storageGet<{ darkMode?: boolean }>(["darkMode"]);
-        if (result.darkMode !== undefined) {
-          setIsDarkMode(result.darkMode);
-          document.documentElement.classList.toggle("dark", result.darkMode);
-        }
-      } else {
-        const saved = localStorage.getItem("darkMode");
-        if (saved !== null) {
-          const isDark = saved === "true";
-          setIsDarkMode(isDark);
-          document.documentElement.classList.toggle("dark", isDark);
-        }
-      }
-    };
-
-    loadDarkMode();
-  }, []);
-
-  const toggleDarkMode = async () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    document.documentElement.classList.toggle("dark", newMode);
-
-    if (chromeApi?.storage?.local) {
-      await new Promise<void>((resolve) => {
-        chromeApi.storage.local.set({ darkMode: newMode }, () => resolve());
-      });
-    } else {
-      localStorage.setItem("darkMode", String(newMode));
-    }
-  };
-
-  type StorageListener = (
-    changes: Record<string, { newValue?: unknown; oldValue?: unknown }>,
-    areaName: string
-  ) => void;
-  type StorageChanges = Record<
-    string,
-    { newValue?: unknown; oldValue?: unknown }
-  >;
-  useEffect(() => {
     loadEntries();
     loadInterval();
     refreshNextReminder();
     const poll = window.setInterval(refreshNextReminder, 10000);
+
+    type StorageListener = (
+      changes: Record<string, { newValue?: unknown; oldValue?: unknown }>,
+      areaName: string
+    ) => void;
+    type StorageChanges = Record<
+      string,
+      { newValue?: unknown; oldValue?: unknown }
+    >;
 
     const handleStorageChange: StorageListener = (changes, areaName) => {
       if (areaName !== "local") return;
@@ -173,11 +109,6 @@ export function App() {
       if (typedChanges.reminderIntervalMinutes) {
         loadInterval();
         refreshNextReminder();
-      }
-      if (typedChanges.darkMode) {
-        const newMode = (typedChanges.darkMode.newValue as boolean) ?? false;
-        setIsDarkMode(newMode);
-        document.documentElement.classList.toggle("dark", newMode);
       }
     };
 
@@ -317,11 +248,6 @@ export function App() {
     />,
   ];
 
-  const maxStep = panes.length - 1;
-
-  const goNext = () => setStep((prev) => Math.min(prev + 1, maxStep));
-  const goPrev = () => setStep((prev) => Math.max(prev - 1, 0));
-
   return (
     <div className="layout font-sans text-ink">
       <header className="header-block">
@@ -356,26 +282,12 @@ export function App() {
         </AnimatePresence>
       </div>
       <div className="pagination-bar">
-        <button
-          type="button"
-          className="nav-btn"
-          onClick={goPrev}
-          disabled={step === 0}
-          aria-label="previous"
-        >
-          <ChevronLeft className="h-5 w-5" aria-hidden />
-        </button>
         <div className="nav-items">
           {navItems.map((item, index) => (
             <button
               key={item.id}
               type="button"
-              className={
-                index === step ? "nav-item nav-item-active" : "nav-item"
-              }
-              style={{
-                color: "var(--muted)",
-              }}
+              className={`${step === index ? "nav-item nav-item-active" : "nav-item"}`}
               onClick={() => setStep(index)}
               aria-label={item.label}
             >
@@ -386,26 +298,7 @@ export function App() {
             </button>
           ))}
         </div>
-        <button
-          type="button"
-          className="nav-btn"
-          onClick={goNext}
-          disabled={step === maxStep}
-          aria-label="next"
-        >
-          <ChevronRight className="h-5 w-5" aria-hidden />
-        </button>
       </div>
     </div>
   );
-}
-
-function triggerDownload(filename: string, content: string, mime: string) {
-  const blob = new Blob([content], { type: mime });
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement("a");
-  anchor.href = url;
-  anchor.download = filename;
-  anchor.click();
-  URL.revokeObjectURL(url);
 }

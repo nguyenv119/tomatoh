@@ -31674,32 +31674,12 @@ var init_createLucideIcon = __esm({
   }
 });
 
-// node_modules/lucide-react/dist/esm/icons/chevron-left.js
-var __iconNode, ChevronLeft;
-var init_chevron_left = __esm({
-  "node_modules/lucide-react/dist/esm/icons/chevron-left.js"() {
-    init_createLucideIcon();
-    __iconNode = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
-    ChevronLeft = createLucideIcon("chevron-left", __iconNode);
-  }
-});
-
-// node_modules/lucide-react/dist/esm/icons/chevron-right.js
-var __iconNode2, ChevronRight;
-var init_chevron_right = __esm({
-  "node_modules/lucide-react/dist/esm/icons/chevron-right.js"() {
-    init_createLucideIcon();
-    __iconNode2 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-    ChevronRight = createLucideIcon("chevron-right", __iconNode2);
-  }
-});
-
 // node_modules/lucide-react/dist/esm/icons/file-json.js
-var __iconNode3, FileJson;
+var __iconNode, FileJson;
 var init_file_json = __esm({
   "node_modules/lucide-react/dist/esm/icons/file-json.js"() {
     init_createLucideIcon();
-    __iconNode3 = [
+    __iconNode = [
       ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
       ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
       [
@@ -31711,16 +31691,16 @@ var init_file_json = __esm({
         { d: "M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1", key: "mpwhp6" }
       ]
     ];
-    FileJson = createLucideIcon("file-json", __iconNode3);
+    FileJson = createLucideIcon("file-json", __iconNode);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/moon.js
-var __iconNode4, Moon;
+var __iconNode2, Moon;
 var init_moon = __esm({
   "node_modules/lucide-react/dist/esm/icons/moon.js"() {
     init_createLucideIcon();
-    __iconNode4 = [
+    __iconNode2 = [
       [
         "path",
         {
@@ -31729,16 +31709,16 @@ var init_moon = __esm({
         }
       ]
     ];
-    Moon = createLucideIcon("moon", __iconNode4);
+    Moon = createLucideIcon("moon", __iconNode2);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/play.js
-var __iconNode5, Play;
+var __iconNode3, Play;
 var init_play = __esm({
   "node_modules/lucide-react/dist/esm/icons/play.js"() {
     init_createLucideIcon();
-    __iconNode5 = [
+    __iconNode3 = [
       [
         "path",
         {
@@ -31747,31 +31727,31 @@ var init_play = __esm({
         }
       ]
     ];
-    Play = createLucideIcon("play", __iconNode5);
+    Play = createLucideIcon("play", __iconNode3);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/refresh-ccw.js
-var __iconNode6, RefreshCcw;
+var __iconNode4, RefreshCcw;
 var init_refresh_ccw = __esm({
   "node_modules/lucide-react/dist/esm/icons/refresh-ccw.js"() {
     init_createLucideIcon();
-    __iconNode6 = [
+    __iconNode4 = [
       ["path", { d: "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "14sxne" }],
       ["path", { d: "M3 3v5h5", key: "1xhq8a" }],
       ["path", { d: "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16", key: "1hlbsb" }],
       ["path", { d: "M16 16h5v5", key: "ccwih5" }]
     ];
-    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode6);
+    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode4);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/sun.js
-var __iconNode7, Sun;
+var __iconNode5, Sun;
 var init_sun = __esm({
   "node_modules/lucide-react/dist/esm/icons/sun.js"() {
     init_createLucideIcon();
-    __iconNode7 = [
+    __iconNode5 = [
       ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
       ["path", { d: "M12 2v2", key: "tus03m" }],
       ["path", { d: "M12 20v2", key: "1lh1kg" }],
@@ -31782,15 +31762,13 @@ var init_sun = __esm({
       ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
       ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
     ];
-    Sun = createLucideIcon("sun", __iconNode7);
+    Sun = createLucideIcon("sun", __iconNode5);
   }
 });
 
 // node_modules/lucide-react/dist/esm/lucide-react.js
 var init_lucide_react = __esm({
   "node_modules/lucide-react/dist/esm/lucide-react.js"() {
-    init_chevron_left();
-    init_chevron_right();
     init_file_json();
     init_moon();
     init_play();
@@ -31857,16 +31835,150 @@ var init_button = __esm({
   }
 });
 
-// src/components/ui/textarea.tsx
-var React6, import_jsx_runtime8, Textarea;
-var init_textarea = __esm({
-  "src/components/ui/textarea.tsx"() {
+// src/components/ui/input.tsx
+var React6, import_jsx_runtime8, Input;
+var init_input = __esm({
+  "src/components/ui/input.tsx"() {
     "use strict";
     React6 = __toESM(require_react());
     init_utils6();
     import_jsx_runtime8 = __toESM(require_jsx_runtime());
-    Textarea = React6.forwardRef(
-      ({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("textarea", { ref, className: cn("pin-textarea", className), ...props })
+    Input = React6.forwardRef(
+      ({ className, type = "text", ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("input", { ref, type, className: cn("pin-input", className), ...props })
+    );
+    Input.displayName = "Input";
+  }
+});
+
+// src/components/ReminderSettings.tsx
+function ReminderSettings({
+  interval,
+  onIntervalChange,
+  onSave,
+  onOpenReminder,
+  status,
+  saving,
+  nextReminder
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+    motion.div,
+    {
+      layout: true,
+      initial: { opacity: 0, y: 28 },
+      animate: { opacity: 1, y: 0 },
+      transition: { duration: 0.45, delay: 0.08 },
+      className: "stagger-offset",
+      children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Card, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(CardHeader, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CardTitle, { children: "\u23F2\uFE0F reminders" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CardDescription, { children: "choose how often the bell nudges you" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(CardContent, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "input-group", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("label", { htmlFor: "interval", className: "pin-label", children: "minutes between nudges" }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+              Input,
+              {
+                id: "interval",
+                type: "number",
+                min: 1,
+                max: 1440,
+                value: Number.isFinite(interval) ? interval : "",
+                onChange: (event) => onIntervalChange(Number(event.target.value))
+              }
+            ),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "cta-row", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "status-text", children: status }),
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F9ED} saving\u2026" : "\u{1F9ED} save interval" })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "soft-banner", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex items-center justify-between gap-3", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "pin-timestamp", children: nextReminder }),
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Button, { variant: "ghost", onClick: onOpenReminder, className: "btn-sm", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+                Play,
+                {
+                  className: "h-4 w-4",
+                  style: { color: "var(--ink)" },
+                  "aria-hidden": true
+                }
+              ),
+              "open reminder now"
+            ] })
+          ] }) })
+        ] })
+      ] })
+    }
+  );
+}
+var import_jsx_runtime9;
+var init_ReminderSettings = __esm({
+  "src/components/ReminderSettings.tsx"() {
+    "use strict";
+    init_es3();
+    init_lucide_react();
+    init_card();
+    init_button();
+    init_input();
+    import_jsx_runtime9 = __toESM(require_jsx_runtime());
+  }
+});
+
+// src/components/ExportButtons.tsx
+function ExportButtons({ onExportJson, onExportCsv, onReset, busy }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(
+    motion.div,
+    {
+      layout: true,
+      initial: { opacity: 0, y: 28 },
+      animate: { opacity: 1, y: 0 },
+      transition: { duration: 0.45, delay: 0.16 },
+      className: "stagger-offset",
+      children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Card, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(CardHeader, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CardTitle, { children: "exports + reset" }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CardDescription, { children: "download the day\u2019s notes or clear the slate." })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "button-stack", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Button, { variant: "secondary", onClick: onExportJson, disabled: busy, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(FileJson, { className: "h-4 w-4", "aria-hidden": true }),
+            "export json"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Button, { variant: "secondary", onClick: onExportCsv, disabled: busy, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(FileJson, { className: "h-4 w-4", "aria-hidden": true }),
+            "export csv"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Button, { variant: "secondary", onClick: onReset, disabled: busy, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(RefreshCcw, { className: "h-4 w-4", "aria-hidden": true }),
+            "reset entries"
+          ] })
+        ] }) })
+      ] })
+    }
+  );
+}
+var import_jsx_runtime10;
+var init_ExportButtons = __esm({
+  "src/components/ExportButtons.tsx"() {
+    "use strict";
+    init_es3();
+    init_lucide_react();
+    init_card();
+    init_button();
+    import_jsx_runtime10 = __toESM(require_jsx_runtime());
+  }
+});
+
+// src/components/ui/textarea.tsx
+var React7, import_jsx_runtime11, Textarea;
+var init_textarea = __esm({
+  "src/components/ui/textarea.tsx"() {
+    "use strict";
+    React7 = __toESM(require_react());
+    init_utils6();
+    import_jsx_runtime11 = __toESM(require_jsx_runtime());
+    Textarea = React7.forwardRef(
+      ({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("textarea", { ref, className: cn("pin-textarea", className), ...props })
     );
     Textarea.displayName = "Textarea";
   }
@@ -31886,7 +31998,7 @@ function AccomplishmentList({
   (0, import_react26.useEffect)(() => {
     textareaRef.current?.focus();
   }, []);
-  return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
     motion.div,
     {
       layout: true,
@@ -31894,10 +32006,10 @@ function AccomplishmentList({
       animate: { opacity: 1, y: 0 },
       transition: { duration: 0.35 },
       className: "stagger-offset",
-      children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Card, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(CardContent, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "input-group", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Card, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(CardContent, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "input-group", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
               Textarea,
               {
                 id: "highlight",
@@ -31908,12 +32020,12 @@ function AccomplishmentList({
                 onChange: (event) => onDraftChange(event.target.value)
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "cta-row", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "status-text", children: status }),
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F4DD} logging\u2026" : "\u{1F4DD} log event" })
+            /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "cta-row", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "status-text", children: status }),
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F4DD} logging\u2026" : "\u{1F4DD} log event" })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "entries-stack", children: entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "pin-empty", children: "no pins yet" }) : entries.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "entries-stack", children: entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "pin-empty", children: "no pins yet" }) : entries.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
             motion.article,
             {
               initial: { opacity: 0, y: 14 },
@@ -31921,22 +32033,22 @@ function AccomplishmentList({
               transition: { duration: 0.25 },
               className: "entry-card",
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "entry-time", children: new Date(entry.timestamp).toLocaleTimeString([], {
+                /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "entry-time", children: new Date(entry.timestamp).toLocaleTimeString([], {
                   hour: "numeric",
                   minute: "2-digit"
                 }) }),
-                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "entry-note", children: entry.note })
+                /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "entry-note", children: entry.note })
               ]
             },
             entry.timestamp
           )) })
         ] }),
-        celebration ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(motion.div, { className: "confetti-burst", children: "\u2728\u2728\u2728\u2728\u2728" }) : null
+        celebration ? /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(motion.div, { className: "confetti-burst", children: "\u2728\u2728\u2728\u2728\u2728" }) : null
       ] })
     }
   );
 }
-var import_react26, import_jsx_runtime9;
+var import_react26, import_jsx_runtime12;
 var init_AccomplishmentList = __esm({
   "src/components/AccomplishmentList.tsx"() {
     "use strict";
@@ -31945,163 +32057,129 @@ var init_AccomplishmentList = __esm({
     init_card();
     init_button();
     init_textarea();
-    import_jsx_runtime9 = __toESM(require_jsx_runtime());
-  }
-});
-
-// src/components/ui/input.tsx
-var React7, import_jsx_runtime10, Input;
-var init_input = __esm({
-  "src/components/ui/input.tsx"() {
-    "use strict";
-    React7 = __toESM(require_react());
-    init_utils6();
-    import_jsx_runtime10 = __toESM(require_jsx_runtime());
-    Input = React7.forwardRef(
-      ({ className, type = "text", ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("input", { ref, type, className: cn("pin-input", className), ...props })
-    );
-    Input.displayName = "Input";
-  }
-});
-
-// src/components/ReminderSettings.tsx
-function ReminderSettings({
-  interval,
-  onIntervalChange,
-  onSave,
-  onOpenReminder,
-  status,
-  saving,
-  nextReminder
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-    motion.div,
-    {
-      layout: true,
-      initial: { opacity: 0, y: 28 },
-      animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.45, delay: 0.08 },
-      className: "stagger-offset",
-      children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Card, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(CardHeader, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(CardTitle, { children: "\u23F2\uFE0F reminders" }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(CardDescription, { children: "choose how often the bell nudges you" })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(CardContent, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "input-group", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("label", { htmlFor: "interval", className: "pin-label", children: "minutes between nudges" }),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-              Input,
-              {
-                id: "interval",
-                type: "number",
-                min: 1,
-                max: 1440,
-                value: Number.isFinite(interval) ? interval : "",
-                onChange: (event) => onIntervalChange(Number(event.target.value))
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "cta-row", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "status-text", children: status }),
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F9ED} saving\u2026" : "\u{1F9ED} save interval" })
-            ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "soft-banner", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-center justify-between gap-3", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "pin-timestamp", children: nextReminder }),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Button, { variant: "ghost", onClick: onOpenReminder, className: "btn-sm", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-                Play,
-                {
-                  className: "h-4 w-4",
-                  style: { color: "var(--ink)" },
-                  "aria-hidden": true
-                }
-              ),
-              "open reminder now"
-            ] })
-          ] }) })
-        ] })
-      ] })
-    }
-  );
-}
-var import_jsx_runtime11;
-var init_ReminderSettings = __esm({
-  "src/components/ReminderSettings.tsx"() {
-    "use strict";
-    init_es3();
-    init_lucide_react();
-    init_card();
-    init_button();
-    init_input();
-    import_jsx_runtime11 = __toESM(require_jsx_runtime());
-  }
-});
-
-// src/components/ExportButtons.tsx
-function ExportButtons({ onExportJson, onExportCsv, onReset, busy }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
-    motion.div,
-    {
-      layout: true,
-      initial: { opacity: 0, y: 28 },
-      animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.45, delay: 0.16 },
-      className: "stagger-offset",
-      children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Card, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(CardHeader, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardTitle, { children: "exports + reset" }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardDescription, { children: "download the day\u2019s notes or clear the slate." })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "button-stack", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Button, { variant: "secondary", onClick: onExportJson, disabled: busy, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(FileJson, { className: "h-4 w-4", "aria-hidden": true }),
-            "export json"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Button, { variant: "secondary", onClick: onExportCsv, disabled: busy, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(FileJson, { className: "h-4 w-4", "aria-hidden": true }),
-            "export csv"
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Button, { variant: "secondary", onClick: onReset, disabled: busy, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(RefreshCcw, { className: "h-4 w-4", "aria-hidden": true }),
-            "reset entries"
-          ] })
-        ] }) })
-      ] })
-    }
-  );
-}
-var import_jsx_runtime12;
-var init_ExportButtons = __esm({
-  "src/components/ExportButtons.tsx"() {
-    "use strict";
-    init_es3();
-    init_lucide_react();
-    init_card();
-    init_button();
     import_jsx_runtime12 = __toESM(require_jsx_runtime());
   }
 });
 
-// src/popup/App.tsx
+// src/lib/chrome.ts
 function todayKey() {
   return (/* @__PURE__ */ new Date()).toISOString().split("T")[0];
 }
+function triggerDownload(filename, content, mime) {
+  const blob = new Blob([content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  URL.revokeObjectURL(url);
+}
+var chromeApi, ALARM_NAME, storageGet, sendMessage, getAlarm;
+var init_chrome = __esm({
+  "src/lib/chrome.ts"() {
+    "use strict";
+    init_AccomplishmentList();
+    chromeApi = globalThis.chrome;
+    ALARM_NAME = "accomplishment-reminder";
+    storageGet = (keys) => new Promise((resolve) => {
+      if (!chromeApi?.storage?.local) {
+        resolve({});
+        return;
+      }
+      chromeApi.storage.local.get(keys ?? null, (result) => resolve(result));
+    });
+    sendMessage = (message) => new Promise((resolve) => {
+      if (!chromeApi?.runtime?.sendMessage) {
+        resolve({ success: false });
+        return;
+      }
+      chromeApi.runtime.sendMessage(message, (response) => resolve(response));
+    });
+    getAlarm = (name) => new Promise((resolve) => {
+      if (!chromeApi?.alarms?.get) {
+        resolve(void 0);
+        return;
+      }
+      chromeApi.alarms.get(name, (alarm) => resolve(alarm ?? void 0));
+    });
+  }
+});
+
+// src/lib/useDarkMode.ts
+function useDarkMode(options) {
+  const [isDarkMode, setIsDarkMode] = (0, import_react27.useState)(false);
+  (0, import_react27.useEffect)(() => {
+    const loadDarkMode = async () => {
+      if (chromeApi?.storage?.local) {
+        const result = await storageGet(["darkMode"]);
+        if (result.darkMode !== void 0) {
+          setIsDarkMode(result.darkMode);
+          document.documentElement.classList.toggle("dark", result.darkMode);
+        }
+      } else {
+        const saved = localStorage.getItem("darkMode");
+        if (saved !== null) {
+          const isDark = saved === "true";
+          setIsDarkMode(isDark);
+          document.documentElement.classList.toggle("dark", isDark);
+        }
+      }
+    };
+    loadDarkMode();
+    if (options?.listenToStorage && chromeApi?.storage?.onChanged) {
+      const handleStorageChange = (changes, areaName) => {
+        if (areaName !== "local") return;
+        if (changes.darkMode) {
+          const newMode = changes.darkMode.newValue ?? false;
+          setIsDarkMode(newMode);
+          document.documentElement.classList.toggle("dark", newMode);
+        }
+      };
+      chromeApi.storage.onChanged.addListener(handleStorageChange);
+      return () => {
+        chromeApi.storage.onChanged.removeListener(handleStorageChange);
+      };
+    }
+  }, [options?.listenToStorage]);
+  const toggleDarkMode = async () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark", newMode);
+    if (chromeApi?.storage?.local) {
+      await new Promise((resolve) => {
+        chromeApi.storage.local.set({ darkMode: newMode }, () => resolve());
+      });
+    } else {
+      localStorage.setItem("darkMode", String(newMode));
+    }
+  };
+  return { isDarkMode, toggleDarkMode };
+}
+var import_react27;
+var init_useDarkMode = __esm({
+  "src/lib/useDarkMode.ts"() {
+    "use strict";
+    import_react27 = __toESM(require_react());
+    init_chrome();
+  }
+});
+
+// src/popup/App.tsx
 function App() {
-  const [entries, setEntries] = (0, import_react27.useState)([]);
-  const [draft, setDraft] = (0, import_react27.useState)("");
-  const [intervalMinutes, setIntervalMinutes] = (0, import_react27.useState)(15);
-  const [saveStatus, setSaveStatus] = (0, import_react27.useState)(null);
-  const [intervalStatus, setIntervalStatus] = (0, import_react27.useState)(null);
-  const [exportBusy, setExportBusy] = (0, import_react27.useState)(false);
-  const [nextReminder, setNextReminder] = (0, import_react27.useState)(
+  const [entries, setEntries] = (0, import_react28.useState)([]);
+  const [draft, setDraft] = (0, import_react28.useState)("");
+  const [intervalMinutes, setIntervalMinutes] = (0, import_react28.useState)(15);
+  const [saveStatus, setSaveStatus] = (0, import_react28.useState)(null);
+  const [intervalStatus, setIntervalStatus] = (0, import_react28.useState)(null);
+  const [exportBusy, setExportBusy] = (0, import_react28.useState)(false);
+  const [nextReminder, setNextReminder] = (0, import_react28.useState)(
     "loading reminder schedule\u2026"
   );
-  const [savingEntry, setSavingEntry] = (0, import_react27.useState)(false);
-  const [savingInterval, setSavingInterval] = (0, import_react27.useState)(false);
-  const [celebration, setCelebration] = (0, import_react27.useState)(false);
-  const [step, setStep] = (0, import_react27.useState)(0);
-  const [isDarkMode, setIsDarkMode] = (0, import_react27.useState)(false);
+  const [savingEntry, setSavingEntry] = (0, import_react28.useState)(false);
+  const [savingInterval, setSavingInterval] = (0, import_react28.useState)(false);
+  const [celebration, setCelebration] = (0, import_react28.useState)(false);
+  const [step, setStep] = (0, import_react28.useState)(0);
+  const { isDarkMode, toggleDarkMode } = useDarkMode({ listenToStorage: true });
   const loadEntries = async () => {
     const key = todayKey();
     const { entries: storedEntries = {} } = await storageGet(["entries"]);
@@ -32138,38 +32216,7 @@ function App() {
     });
     setNextReminder(`next in ${minutes}m ${seconds}s \xB7 about ${readable}`);
   };
-  (0, import_react27.useEffect)(() => {
-    const loadDarkMode = async () => {
-      if (chromeApi?.storage?.local) {
-        const result = await storageGet(["darkMode"]);
-        if (result.darkMode !== void 0) {
-          setIsDarkMode(result.darkMode);
-          document.documentElement.classList.toggle("dark", result.darkMode);
-        }
-      } else {
-        const saved = localStorage.getItem("darkMode");
-        if (saved !== null) {
-          const isDark = saved === "true";
-          setIsDarkMode(isDark);
-          document.documentElement.classList.toggle("dark", isDark);
-        }
-      }
-    };
-    loadDarkMode();
-  }, []);
-  const toggleDarkMode = async () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    document.documentElement.classList.toggle("dark", newMode);
-    if (chromeApi?.storage?.local) {
-      await new Promise((resolve) => {
-        chromeApi.storage.local.set({ darkMode: newMode }, () => resolve());
-      });
-    } else {
-      localStorage.setItem("darkMode", String(newMode));
-    }
-  };
-  (0, import_react27.useEffect)(() => {
+  (0, import_react28.useEffect)(() => {
     loadEntries();
     loadInterval();
     refreshNextReminder();
@@ -32181,11 +32228,6 @@ function App() {
       if (typedChanges.reminderIntervalMinutes) {
         loadInterval();
         refreshNextReminder();
-      }
-      if (typedChanges.darkMode) {
-        const newMode = typedChanges.darkMode.newValue ?? false;
-        setIsDarkMode(newMode);
-        document.documentElement.classList.toggle("dark", newMode);
       }
     };
     if (chromeApi?.storage?.onChanged) {
@@ -32280,7 +32322,7 @@ function App() {
   const handleOpenReminder = async () => {
     await sendMessage({ type: "openReminder" });
   };
-  const todaysEntries = (0, import_react27.useMemo)(() => entries, [entries]);
+  const todaysEntries = (0, import_react28.useMemo)(() => entries, [entries]);
   const panes = [
     /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
       AccomplishmentList,
@@ -32319,9 +32361,6 @@ function App() {
       "exports"
     )
   ];
-  const maxStep = panes.length - 1;
-  const goNext = () => setStep((prev) => Math.min(prev + 1, maxStep));
-  const goPrev = () => setStep((prev) => Math.max(prev - 1, 0));
   return /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "layout font-sans text-ink", children: [
     /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("header", { className: "header-block", children: [
       /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h1", { className: "header-title", children: "\u{1F345} tomatoh" }),
@@ -32348,92 +32387,35 @@ function App() {
       },
       step
     ) }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "pagination-bar", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
-        "button",
-        {
-          type: "button",
-          className: "nav-btn",
-          onClick: goPrev,
-          disabled: step === 0,
-          "aria-label": "previous",
-          children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(ChevronLeft, { className: "h-5 w-5", "aria-hidden": true })
-        }
-      ),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "nav-items", children: navItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
-        "button",
-        {
-          type: "button",
-          className: index === step ? "nav-item nav-item-active" : "nav-item",
-          style: {
-            color: "var(--muted)"
-          },
-          onClick: () => setStep(index),
-          "aria-label": item.label,
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-icon", "aria-hidden": true, children: item.icon }),
-            /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-label", children: item.label })
-          ]
-        },
-        item.id
-      )) }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
-        "button",
-        {
-          type: "button",
-          className: "nav-btn",
-          onClick: goNext,
-          disabled: step === maxStep,
-          "aria-label": "next",
-          children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(ChevronRight, { className: "h-5 w-5", "aria-hidden": true })
-        }
-      )
-    ] })
+    /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "pagination-bar", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "nav-items", children: navItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)(
+      "button",
+      {
+        type: "button",
+        className: `${step === index ? "nav-item nav-item-active" : "nav-item"}`,
+        onClick: () => setStep(index),
+        "aria-label": item.label,
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-icon", "aria-hidden": true, children: item.icon }),
+          /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-label", children: item.label })
+        ]
+      },
+      item.id
+    )) }) })
   ] });
 }
-function triggerDownload(filename, content, mime) {
-  const blob = new Blob([content], { type: mime });
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement("a");
-  anchor.href = url;
-  anchor.download = filename;
-  anchor.click();
-  URL.revokeObjectURL(url);
-}
-var import_react27, import_jsx_runtime13, chromeApi, storageGet, sendMessage, getAlarm, ALARM_NAME, navItems;
+var import_react28, import_jsx_runtime13, navItems;
 var init_App = __esm({
   "src/popup/App.tsx"() {
     "use strict";
-    import_react27 = __toESM(require_react());
+    import_react28 = __toESM(require_react());
     init_es3();
     init_lucide_react();
-    init_AccomplishmentList();
     init_ReminderSettings();
     init_ExportButtons();
+    init_chrome();
+    init_useDarkMode();
+    init_AccomplishmentList();
     import_jsx_runtime13 = __toESM(require_jsx_runtime());
-    chromeApi = globalThis.chrome;
-    storageGet = (keys) => new Promise((resolve) => {
-      if (!chromeApi?.storage?.local) {
-        resolve({});
-        return;
-      }
-      chromeApi.storage.local.get(keys ?? null, (result) => resolve(result));
-    });
-    sendMessage = (message) => new Promise((resolve) => {
-      if (!chromeApi?.runtime?.sendMessage) {
-        resolve({ success: false });
-        return;
-      }
-      chromeApi.runtime.sendMessage(message, (response) => resolve(response));
-    });
-    getAlarm = (name) => new Promise((resolve) => {
-      if (!chromeApi?.alarms?.get) {
-        resolve(void 0);
-        return;
-      }
-      chromeApi.alarms.get(name, (alarm) => resolve(alarm ?? void 0));
-    });
-    ALARM_NAME = "accomplishment-reminder";
     navItems = [
       { id: 0, icon: "\u{1F4DD}", label: "log" },
       { id: 1, icon: "\u23F1", label: "reminders" },
@@ -32445,7 +32427,7 @@ var init_App = __esm({
 // src/popup/index.tsx
 var require_index = __commonJS({
   "src/popup/index.tsx"() {
-    var import_react28 = __toESM(require_react());
+    var import_react29 = __toESM(require_react());
     var import_client = __toESM(require_client());
     init_App();
     var import_jsx_runtime14 = __toESM(require_jsx_runtime());
@@ -32519,8 +32501,6 @@ lucide-react/dist/esm/shared/src/utils.js:
 lucide-react/dist/esm/defaultAttributes.js:
 lucide-react/dist/esm/Icon.js:
 lucide-react/dist/esm/createLucideIcon.js:
-lucide-react/dist/esm/icons/chevron-left.js:
-lucide-react/dist/esm/icons/chevron-right.js:
 lucide-react/dist/esm/icons/file-json.js:
 lucide-react/dist/esm/icons/moon.js:
 lucide-react/dist/esm/icons/play.js:

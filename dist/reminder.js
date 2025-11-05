@@ -1331,7 +1331,7 @@ var require_react_dom_development = __commonJS({
         return dispatcher;
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React3 = require_react(), Internals = {
+      var React4 = require_react(), Internals = {
         d: {
           f: noop,
           r: function() {
@@ -1349,7 +1349,7 @@ var require_react_dom_development = __commonJS({
         },
         p: 0,
         findDOMNode: null
-      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React4.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
       "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
         "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
       );
@@ -2884,7 +2884,7 @@ var require_react_dom_client_development = __commonJS({
         "number" === type && getActiveElement(node.ownerDocument) === node || node.defaultValue === "" + value || (node.defaultValue = "" + value);
       }
       function validateOptionProps(element, props) {
-        null == props.value && ("object" === typeof props.children && null !== props.children ? React3.Children.forEach(props.children, function(child) {
+        null == props.value && ("object" === typeof props.children && null !== props.children ? React4.Children.forEach(props.children, function(child) {
           null == child || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || didWarnInvalidChild || (didWarnInvalidChild = true, console.error(
             "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
           ));
@@ -18516,14 +18516,14 @@ var require_react_dom_client_development = __commonJS({
         ));
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var Scheduler = require_scheduler(), React3 = require_react(), ReactDOM = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy");
+      var Scheduler = require_scheduler(), React4 = require_react(), ReactDOM = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy");
       Symbol.for("react.scope");
       var REACT_ACTIVITY_TYPE = Symbol.for("react.activity");
       Symbol.for("react.legacy_hidden");
       Symbol.for("react.tracing_marker");
       var REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel");
       Symbol.for("react.view_transition");
-      var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+      var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React4.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
         pending: false,
         data: null,
         method: null,
@@ -21311,7 +21311,7 @@ var require_react_dom_client_development = __commonJS({
         }
       };
       (function() {
-        var isomorphicReactPackageVersion = React3.version;
+        var isomorphicReactPackageVersion = React4.version;
         if ("19.2.0" !== isomorphicReactPackageVersion)
           throw Error(
             'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.0\nLearn more: https://react.dev/warnings/version-mismatch")
@@ -21675,18 +21675,18 @@ var require_react_jsx_runtime_development = __commonJS({
       function isValidElement(object) {
         return "object" === typeof object && null !== object && object.$$typeof === REACT_ELEMENT_TYPE;
       }
-      var React3 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React3.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
+      var React4 = require_react(), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy"), REACT_ACTIVITY_TYPE = Symbol.for("react.activity"), REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), ReactSharedInternals = React4.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, hasOwnProperty = Object.prototype.hasOwnProperty, isArrayImpl = Array.isArray, createTask = console.createTask ? console.createTask : function() {
         return null;
       };
-      React3 = {
+      React4 = {
         react_stack_bottom_frame: function(callStackForError) {
           return callStackForError();
         }
       };
       var specialPropKeyWarningShown;
       var didWarnAboutElementRef = {};
-      var unknownOwnerDebugStack = React3.react_stack_bottom_frame.bind(
-        React3,
+      var unknownOwnerDebugStack = React4.react_stack_bottom_frame.bind(
+        React4,
         UnknownOwner
       )();
       var unknownOwnerDebugTask = createTask(getTaskName(UnknownOwner));
@@ -21771,28 +21771,123 @@ var init_textarea = __esm({
   }
 });
 
-// src/reminder/App.tsx
-function ReminderApp() {
-  const [note, setNote] = (0, import_react.useState)("");
-  const [status, setStatus] = (0, import_react.useState)(null);
-  const [saving, setSaving] = (0, import_react.useState)(false);
-  (0, import_react.useEffect)(() => {
+// src/components/ui/card.tsx
+var React3, import_jsx_runtime3, Card;
+var init_card = __esm({
+  "src/components/ui/card.tsx"() {
+    "use strict";
+    React3 = __toESM(require_react());
+    init_utils();
+    import_jsx_runtime3 = __toESM(require_jsx_runtime());
+    Card = React3.forwardRef(
+      ({ className, ...props }, ref) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { ref, className: cn("pin-card", className), ...props })
+    );
+    Card.displayName = "Card";
+  }
+});
+
+// src/components/AccomplishmentList.tsx
+var import_react, import_jsx_runtime4;
+var init_AccomplishmentList = __esm({
+  "src/components/AccomplishmentList.tsx"() {
+    "use strict";
+    import_react = __toESM(require_react());
+    init_card();
+    init_button();
+    init_textarea();
+    import_jsx_runtime4 = __toESM(require_jsx_runtime());
+  }
+});
+
+// src/lib/chrome.ts
+var chromeApi, storageGet, sendMessage;
+var init_chrome = __esm({
+  "src/lib/chrome.ts"() {
+    "use strict";
+    init_AccomplishmentList();
+    chromeApi = globalThis.chrome;
+    storageGet = (keys) => new Promise((resolve) => {
+      if (!chromeApi?.storage?.local) {
+        resolve({});
+        return;
+      }
+      chromeApi.storage.local.get(keys ?? null, (result) => resolve(result));
+    });
+    sendMessage = (message) => new Promise((resolve) => {
+      if (!chromeApi?.runtime?.sendMessage) {
+        resolve({ success: false });
+        return;
+      }
+      chromeApi.runtime.sendMessage(message, (response) => resolve(response));
+    });
+  }
+});
+
+// src/lib/useDarkMode.ts
+function useDarkMode(options) {
+  const [isDarkMode, setIsDarkMode] = (0, import_react2.useState)(false);
+  (0, import_react2.useEffect)(() => {
     const loadDarkMode = async () => {
       if (chromeApi?.storage?.local) {
         const result = await storageGet(["darkMode"]);
         if (result.darkMode !== void 0) {
+          setIsDarkMode(result.darkMode);
           document.documentElement.classList.toggle("dark", result.darkMode);
         }
       } else {
         const saved = localStorage.getItem("darkMode");
         if (saved !== null) {
           const isDark = saved === "true";
+          setIsDarkMode(isDark);
           document.documentElement.classList.toggle("dark", isDark);
         }
       }
     };
     loadDarkMode();
-  }, []);
+    if (options?.listenToStorage && chromeApi?.storage?.onChanged) {
+      const handleStorageChange = (changes, areaName) => {
+        if (areaName !== "local") return;
+        if (changes.darkMode) {
+          const newMode = changes.darkMode.newValue ?? false;
+          setIsDarkMode(newMode);
+          document.documentElement.classList.toggle("dark", newMode);
+        }
+      };
+      chromeApi.storage.onChanged.addListener(handleStorageChange);
+      return () => {
+        chromeApi.storage.onChanged.removeListener(handleStorageChange);
+      };
+    }
+  }, [options?.listenToStorage]);
+  const toggleDarkMode = async () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark", newMode);
+    if (chromeApi?.storage?.local) {
+      await new Promise((resolve) => {
+        chromeApi.storage.local.set({ darkMode: newMode }, () => resolve());
+      });
+    } else {
+      localStorage.setItem("darkMode", String(newMode));
+    }
+  };
+  return { isDarkMode, toggleDarkMode };
+}
+var import_react2;
+var init_useDarkMode = __esm({
+  "src/lib/useDarkMode.ts"() {
+    "use strict";
+    import_react2 = __toESM(require_react());
+    init_chrome();
+  }
+});
+
+// src/reminder/App.tsx
+function ReminderApp() {
+  const [note, setNote] = (0, import_react3.useState)("");
+  const [status, setStatus] = (0, import_react3.useState)(null);
+  const [saving, setSaving] = (0, import_react3.useState)(false);
+  useDarkMode();
   const handleSave = async (event) => {
     event.preventDefault();
     if (!note.trim()) {
@@ -21801,12 +21896,7 @@ function ReminderApp() {
     }
     setSaving(true);
     setStatus("saving\u2026");
-    if (!chromeApi?.runtime?.sendMessage) {
-      setStatus("chrome api unavailable");
-      setSaving(false);
-      return;
-    }
-    const response = await chromeApi.runtime.sendMessage({
+    const response = await sendMessage({
       type: "saveAccomplishment",
       items: [note.trim()]
     });
@@ -21822,9 +21912,9 @@ function ReminderApp() {
   const handleSkip = () => {
     window.close();
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "reminder-shell font-sans text-ink", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("form", { className: "reminder-card", onSubmit: handleSave, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "\u2728 what did you just accomplish?" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "textarea-stack", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "reminder-shell font-sans text-ink", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("form", { className: "reminder-card", onSubmit: handleSave, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "\u2728 what did you just accomplish?" }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "textarea-stack", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
       Textarea,
       {
         rows: 3,
@@ -21833,45 +21923,39 @@ function ReminderApp() {
         onChange: (event) => setNote(event.target.value)
       }
     ) }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "status-text", children: status }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "reminder-actions", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { variant: "ghost", type: "button", onClick: handleSkip, disabled: saving, children: "maybe later" }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { type: "submit", disabled: saving, className: "btn-sm", children: saving ? "\u{1F4DD} logging\u2026" : "log it \u{1F4DD}" })
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "status-text", children: status }),
+    /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "reminder-actions", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { variant: "ghost", type: "button", onClick: handleSkip, disabled: saving, children: "maybe later" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { type: "submit", disabled: saving, className: "btn-sm", children: saving ? "\u{1F4DD} logging\u2026" : "log it \u{1F4DD}" })
     ] })
   ] }) });
 }
-var import_react, import_jsx_runtime3, chromeApi, storageGet;
+var import_react3, import_jsx_runtime5;
 var init_App = __esm({
   "src/reminder/App.tsx"() {
     "use strict";
-    import_react = __toESM(require_react());
+    import_react3 = __toESM(require_react());
     init_button();
     init_textarea();
-    import_jsx_runtime3 = __toESM(require_jsx_runtime());
-    chromeApi = globalThis.chrome;
-    storageGet = (keys) => new Promise((resolve) => {
-      if (!chromeApi?.storage?.local) {
-        resolve({});
-        return;
-      }
-      chromeApi.storage.local.get(keys ?? null, (result) => resolve(result));
-    });
+    init_chrome();
+    init_useDarkMode();
+    import_jsx_runtime5 = __toESM(require_jsx_runtime());
   }
 });
 
 // src/reminder/index.tsx
 var require_index = __commonJS({
   "src/reminder/index.tsx"() {
-    var import_react2 = __toESM(require_react());
+    var import_react4 = __toESM(require_react());
     var import_client = __toESM(require_client());
     init_App();
-    var import_jsx_runtime4 = __toESM(require_jsx_runtime());
+    var import_jsx_runtime6 = __toESM(require_jsx_runtime());
     var rootElement = document.getElementById("root");
     if (!rootElement) {
       throw new Error("root container not found");
     }
     var root = (0, import_client.createRoot)(rootElement);
-    root.render(/* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ReminderApp, {}));
+    root.render(/* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ReminderApp, {}));
   }
 });
 export default require_index();

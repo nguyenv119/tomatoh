@@ -31715,12 +31715,30 @@ var init_file_json = __esm({
   }
 });
 
+// node_modules/lucide-react/dist/esm/icons/moon.js
+var __iconNode4, Moon;
+var init_moon = __esm({
+  "node_modules/lucide-react/dist/esm/icons/moon.js"() {
+    init_createLucideIcon();
+    __iconNode4 = [
+      [
+        "path",
+        {
+          d: "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401",
+          key: "kfwtm"
+        }
+      ]
+    ];
+    Moon = createLucideIcon("moon", __iconNode4);
+  }
+});
+
 // node_modules/lucide-react/dist/esm/icons/play.js
-var __iconNode4, Play;
+var __iconNode5, Play;
 var init_play = __esm({
   "node_modules/lucide-react/dist/esm/icons/play.js"() {
     init_createLucideIcon();
-    __iconNode4 = [
+    __iconNode5 = [
       [
         "path",
         {
@@ -31729,22 +31747,42 @@ var init_play = __esm({
         }
       ]
     ];
-    Play = createLucideIcon("play", __iconNode4);
+    Play = createLucideIcon("play", __iconNode5);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/refresh-ccw.js
-var __iconNode5, RefreshCcw;
+var __iconNode6, RefreshCcw;
 var init_refresh_ccw = __esm({
   "node_modules/lucide-react/dist/esm/icons/refresh-ccw.js"() {
     init_createLucideIcon();
-    __iconNode5 = [
+    __iconNode6 = [
       ["path", { d: "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "14sxne" }],
       ["path", { d: "M3 3v5h5", key: "1xhq8a" }],
       ["path", { d: "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16", key: "1hlbsb" }],
       ["path", { d: "M16 16h5v5", key: "ccwih5" }]
     ];
-    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode5);
+    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode6);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/sun.js
+var __iconNode7, Sun;
+var init_sun = __esm({
+  "node_modules/lucide-react/dist/esm/icons/sun.js"() {
+    init_createLucideIcon();
+    __iconNode7 = [
+      ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
+      ["path", { d: "M12 2v2", key: "tus03m" }],
+      ["path", { d: "M12 20v2", key: "1lh1kg" }],
+      ["path", { d: "m4.93 4.93 1.41 1.41", key: "149t6j" }],
+      ["path", { d: "m17.66 17.66 1.41 1.41", key: "ptbguv" }],
+      ["path", { d: "M2 12h2", key: "1t8f8n" }],
+      ["path", { d: "M20 12h2", key: "1q8mjw" }],
+      ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
+      ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
+    ];
+    Sun = createLucideIcon("sun", __iconNode7);
   }
 });
 
@@ -31754,8 +31792,10 @@ var init_lucide_react = __esm({
     init_chevron_left();
     init_chevron_right();
     init_file_json();
+    init_moon();
     init_play();
     init_refresh_ccw();
+    init_sun();
   }
 });
 
@@ -32015,7 +32055,7 @@ function ExportButtons({ onExportJson, onExportCsv, onReset, busy }) {
             /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(FileJson, { className: "h-4 w-4", "aria-hidden": true }),
             "export csv"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Button, { variant: "destructive", onClick: onReset, disabled: busy, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Button, { variant: "secondary", onClick: onReset, disabled: busy, children: [
             /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(RefreshCcw, { className: "h-4 w-4", "aria-hidden": true }),
             "reset entries"
           ] })
@@ -32047,16 +32087,17 @@ function App() {
   const [saveStatus, setSaveStatus] = (0, import_react27.useState)(null);
   const [intervalStatus, setIntervalStatus] = (0, import_react27.useState)(null);
   const [exportBusy, setExportBusy] = (0, import_react27.useState)(false);
-  const [nextReminder, setNextReminder] = (0, import_react27.useState)("loading reminder schedule\u2026");
+  const [nextReminder, setNextReminder] = (0, import_react27.useState)(
+    "loading reminder schedule\u2026"
+  );
   const [savingEntry, setSavingEntry] = (0, import_react27.useState)(false);
   const [savingInterval, setSavingInterval] = (0, import_react27.useState)(false);
   const [celebration, setCelebration] = (0, import_react27.useState)(false);
   const [step, setStep] = (0, import_react27.useState)(0);
+  const [isDarkMode, setIsDarkMode] = (0, import_react27.useState)(false);
   const loadEntries = async () => {
     const key = todayKey();
-    const { entries: storedEntries = {} } = await storageGet([
-      "entries"
-    ]);
+    const { entries: storedEntries = {} } = await storageGet(["entries"]);
     const todays = Array.isArray(storedEntries[key]) ? storedEntries[key] : [];
     const ordered = [...todays].sort(
       (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
@@ -32064,7 +32105,9 @@ function App() {
     setEntries(ordered);
   };
   const loadInterval = async () => {
-    const response = await sendMessage({ type: "getInterval" });
+    const response = await sendMessage({
+      type: "getInterval"
+    });
     if (response?.success) {
       setIntervalMinutes(response.minutes);
     }
@@ -32089,6 +32132,37 @@ function App() {
     setNextReminder(`next in ${minutes}m ${seconds}s \xB7 about ${readable}`);
   };
   (0, import_react27.useEffect)(() => {
+    const loadDarkMode = async () => {
+      if (chromeApi?.storage?.local) {
+        const result = await storageGet(["darkMode"]);
+        if (result.darkMode !== void 0) {
+          setIsDarkMode(result.darkMode);
+          document.documentElement.classList.toggle("dark", result.darkMode);
+        }
+      } else {
+        const saved = localStorage.getItem("darkMode");
+        if (saved !== null) {
+          const isDark = saved === "true";
+          setIsDarkMode(isDark);
+          document.documentElement.classList.toggle("dark", isDark);
+        }
+      }
+    };
+    loadDarkMode();
+  }, []);
+  const toggleDarkMode = async () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark", newMode);
+    if (chromeApi?.storage?.local) {
+      await new Promise((resolve) => {
+        chromeApi.storage.local.set({ darkMode: newMode }, () => resolve());
+      });
+    } else {
+      localStorage.setItem("darkMode", String(newMode));
+    }
+  };
+  (0, import_react27.useEffect)(() => {
     loadEntries();
     loadInterval();
     refreshNextReminder();
@@ -32101,11 +32175,20 @@ function App() {
         loadInterval();
         refreshNextReminder();
       }
+      if (typedChanges.darkMode) {
+        const newMode = typedChanges.darkMode.newValue ?? false;
+        setIsDarkMode(newMode);
+        document.documentElement.classList.toggle("dark", newMode);
+      }
     };
-    chromeApi.storage.onChanged.addListener(handleStorageChange);
+    if (chromeApi?.storage?.onChanged) {
+      chromeApi.storage.onChanged.addListener(handleStorageChange);
+    }
     return () => {
       window.clearInterval(poll);
-      chromeApi.storage.onChanged.removeListener(handleStorageChange);
+      if (chromeApi?.storage?.onChanged) {
+        chromeApi.storage.onChanged.removeListener(handleStorageChange);
+      }
     };
   }, []);
   const handleSaveEntry = async () => {
@@ -32153,14 +32236,16 @@ function App() {
   const handleExportJson = async () => {
     setExportBusy(true);
     const data = await storageGet(["entries"]);
-    triggerDownload(`accomplishments-${todayKey()}.json`, JSON.stringify(data.entries ?? {}, null, 2), "application/json");
+    triggerDownload(
+      `accomplishments-${todayKey()}.json`,
+      JSON.stringify(data.entries ?? {}, null, 2),
+      "application/json"
+    );
     setExportBusy(false);
   };
   const handleExportCsv = async () => {
     setExportBusy(true);
-    const { entries: storedEntries = {} } = await storageGet([
-      "entries"
-    ]);
+    const { entries: storedEntries = {} } = await storageGet(["entries"]);
     const rows = [["date", "time", "note"]];
     Object.entries(storedEntries).forEach(([date, daily]) => {
       daily.forEach((entry) => {
@@ -32176,7 +32261,9 @@ function App() {
     setExportBusy(false);
   };
   const handleReset = async () => {
-    const confirmed = window.confirm("reset every saved accomplishment? this cannot be undone.");
+    const confirmed = window.confirm(
+      "reset every saved accomplishment? this cannot be undone."
+    );
     if (!confirmed) return;
     setExportBusy(true);
     await sendMessage({ type: "resetEntries" });
@@ -32230,8 +32317,18 @@ function App() {
   const goPrev = () => setStep((prev) => Math.max(prev - 1, 0));
   return /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("div", { className: "layout font-sans text-ink", children: [
     /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("header", { className: "header-block", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h1", { children: "\u{1F345} tomatoh" }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: "notice and account your tasks" })
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("h1", { className: "header-title", children: "\u{1F345} tomatoh" }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("p", { children: "notice and account your tasks" }),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
+        "button",
+        {
+          type: "button",
+          className: "light-dark-toggle",
+          onClick: toggleDarkMode,
+          "aria-label": isDarkMode ? "switch to light mode" : "switch to dark mode",
+          children: isDarkMode ? /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Moon, { className: "h-5 w-5", "aria-hidden": true }) : /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Sun, { className: "h-5 w-5", "aria-hidden": true })
+        }
+      )
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "pin-grid", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(AnimatePresence, { mode: "wait", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
       motion.div,
@@ -32261,6 +32358,9 @@ function App() {
         {
           type: "button",
           className: index === step ? "nav-item nav-item-active" : "nav-item",
+          style: {
+            color: "var(--muted)"
+          },
           onClick: () => setStep(index),
           "aria-label": item.label,
           children: [
@@ -32305,16 +32405,25 @@ var init_App = __esm({
     init_ExportButtons();
     import_jsx_runtime13 = __toESM(require_jsx_runtime());
     chromeApi = globalThis.chrome;
-    if (!chromeApi) {
-      throw new Error("chrome api unavailable");
-    }
     storageGet = (keys) => new Promise((resolve) => {
+      if (!chromeApi?.storage?.local) {
+        resolve({});
+        return;
+      }
       chromeApi.storage.local.get(keys ?? null, (result) => resolve(result));
     });
     sendMessage = (message) => new Promise((resolve) => {
+      if (!chromeApi?.runtime?.sendMessage) {
+        resolve({ success: false });
+        return;
+      }
       chromeApi.runtime.sendMessage(message, (response) => resolve(response));
     });
     getAlarm = (name) => new Promise((resolve) => {
+      if (!chromeApi?.alarms?.get) {
+        resolve(void 0);
+        return;
+      }
       chromeApi.alarms.get(name, (alarm) => resolve(alarm ?? void 0));
     });
     ALARM_NAME = "accomplishment-reminder";
@@ -32406,8 +32515,10 @@ lucide-react/dist/esm/createLucideIcon.js:
 lucide-react/dist/esm/icons/chevron-left.js:
 lucide-react/dist/esm/icons/chevron-right.js:
 lucide-react/dist/esm/icons/file-json.js:
+lucide-react/dist/esm/icons/moon.js:
 lucide-react/dist/esm/icons/play.js:
 lucide-react/dist/esm/icons/refresh-ccw.js:
+lucide-react/dist/esm/icons/sun.js:
 lucide-react/dist/esm/lucide-react.js:
   (**
    * @license lucide-react v0.545.0 - ISC

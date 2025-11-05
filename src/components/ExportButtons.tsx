@@ -36,7 +36,7 @@ export function ExportButtons({ onExportJson, onExportCsv, onReset, busy }: Expo
               <FileJson className="h-4 w-4" aria-hidden />
               export csv
             </Button>
-            <Button variant="destructive" onClick={onReset} disabled={busy}>
+            <Button variant="secondary" onClick={onReset} disabled={busy}>
               <RefreshCcw className="h-4 w-4" aria-hidden />
               reset entries
             </Button>

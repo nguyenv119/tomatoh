@@ -2,35 +2,44 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { AccomplishmentList, type AccomplishmentEntry } from "../components/AccomplishmentList";
+import { ChevronLeft, ChevronRight, Sun, Moon } from "lucide-react";
+import {
+  AccomplishmentList,
+  type AccomplishmentEntry,
+} from "../components/AccomplishmentList";
 import { ReminderSettings } from "../components/ReminderSettings";
 import { ExportButtons } from "../components/ExportButtons";
 
 const chromeApi = globalThis.chrome;
 
-if (!chromeApi) {
-  throw new Error("chrome api unavailable");
-}
-
 type EntriesByDay = Record<string, AccomplishmentEntry[]>;
 
 const storageGet = <T,>(keys?: string[]): Promise<T> =>
   new Promise((resolve) => {
+    if (!chromeApi?.storage?.local) {
+      resolve({} as T);
+      return;
+    }
     chromeApi.storage.local.get(keys ?? null, (result) => resolve(result as T));
   });
 
 const sendMessage = <T,>(message: unknown): Promise<T> =>
   new Promise((resolve) => {
+    if (!chromeApi?.runtime?.sendMessage) {
+      resolve({ success: false } as T);
+      return;
+    }
     chromeApi.runtime.sendMessage(message, (response: T) => resolve(response));
   });
 
-type ChromeAlarm = Parameters<typeof chromeApi.alarms.get>[1] extends (alarm: infer A) => void
-  ? A
-  : { scheduledTime?: number };
+type ChromeAlarm = { scheduledTime?: number };
 
 const getAlarm = (name: string): Promise<ChromeAlarm | undefined> =>
   new Promise((resolve) => {
+    if (!chromeApi?.alarms?.get) {
+      resolve(undefined);
+      return;
+    }
     chromeApi.alarms.get(name, (alarm) => resolve(alarm ?? undefined));
   });
 
@@ -43,7 +52,7 @@ function todayKey() {
 const navItems = [
   { id: 0, icon: "📝", label: "log" },
   { id: 1, icon: "⏱", label: "reminders" },
-  { id: 2, icon: "📤", label: "exports" }
+  { id: 2, icon: "📤", label: "exports" },
 ];
 
 export function App() {
@@ -53,26 +62,34 @@ export function App() {
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
   const [intervalStatus, setIntervalStatus] = useState<string | null>(null);
   const [exportBusy, setExportBusy] = useState(false);
-  const [nextReminder, setNextReminder] = useState("loading reminder schedule…");
+  const [nextReminder, setNextReminder] = useState(
+    "loading reminder schedule…"
+  );
   const [savingEntry, setSavingEntry] = useState(false);
   const [savingInterval, setSavingInterval] = useState(false);
   const [celebration, setCelebration] = useState(false);
   const [step, setStep] = useState(0);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const loadEntries = async () => {
     const key = todayKey();
-    const { entries: storedEntries = {} as EntriesByDay } = await storageGet<{ entries?: EntriesByDay }>([
-      "entries"
-    ]);
-    const todays = Array.isArray(storedEntries[key!]) ? storedEntries[key!] : [];
+    const { entries: storedEntries = {} as EntriesByDay } = await storageGet<{
+      entries?: EntriesByDay;
+    }>(["entries"]);
+    const todays = Array.isArray(storedEntries[key!])
+      ? storedEntries[key!]
+      : [];
     const ordered = [...todays!].sort(
-      (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+      (a, b) =>
+        new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
     );
     setEntries(ordered);
   };
 
   const loadInterval = async () => {
-    const response = await sendMessage<{ success: boolean; minutes: number }>({ type: "getInterval" });
+    const response = await sendMessage<{ success: boolean; minutes: number }>({
+      type: "getInterval",
+    });
     if (response?.success) {
       setIntervalMinutes(response.minutes);
     }
@@ -95,13 +112,54 @@ export function App() {
     const seconds = Math.round((diff % 60000) / 1000);
     const readable = new Date(scheduledTime).toLocaleTimeString([], {
       hour: "numeric",
-      minute: "2-digit"
+      minute: "2-digit",
     });
     setNextReminder(`next in ${minutes}m ${seconds}s · about ${readable}`);
   };
 
-  type StorageListener = Parameters<typeof chromeApi.storage.onChanged.addListener>[0];
-  type StorageChanges = Record<string, { newValue?: unknown; oldValue?: unknown }>;
+  useEffect(() => {
+    const loadDarkMode = async () => {
+      if (chromeApi?.storage?.local) {
+        const result = await storageGet<{ darkMode?: boolean }>(["darkMode"]);
+        if (result.darkMode !== undefined) {
+          setIsDarkMode(result.darkMode);
+          document.documentElement.classList.toggle("dark", result.darkMode);
+        }
+      } else {
+        const saved = localStorage.getItem("darkMode");
+        if (saved !== null) {
+          const isDark = saved === "true";
+          setIsDarkMode(isDark);
+          document.documentElement.classList.toggle("dark", isDark);
+        }
+      }
+    };
+
+    loadDarkMode();
+  }, []);
+
+  const toggleDarkMode = async () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    document.documentElement.classList.toggle("dark", newMode);
+
+    if (chromeApi?.storage?.local) {
+      await new Promise<void>((resolve) => {
+        chromeApi.storage.local.set({ darkMode: newMode }, () => resolve());
+      });
+    } else {
+      localStorage.setItem("darkMode", String(newMode));
+    }
+  };
+
+  type StorageListener = (
+    changes: Record<string, { newValue?: unknown; oldValue?: unknown }>,
+    areaName: string
+  ) => void;
+  type StorageChanges = Record<
+    string,
+    { newValue?: unknown; oldValue?: unknown }
+  >;
   useEffect(() => {
     loadEntries();
     loadInterval();
@@ -116,13 +174,22 @@ export function App() {
         loadInterval();
         refreshNextReminder();
       }
+      if (typedChanges.darkMode) {
+        const newMode = (typedChanges.darkMode.newValue as boolean) ?? false;
+        setIsDarkMode(newMode);
+        document.documentElement.classList.toggle("dark", newMode);
+      }
     };
 
-    chromeApi.storage.onChanged.addListener(handleStorageChange);
+    if (chromeApi?.storage?.onChanged) {
+      chromeApi.storage.onChanged.addListener(handleStorageChange);
+    }
 
     return () => {
       window.clearInterval(poll);
-      chromeApi.storage.onChanged.removeListener(handleStorageChange);
+      if (chromeApi?.storage?.onChanged) {
+        chromeApi.storage.onChanged.removeListener(handleStorageChange);
+      }
     };
   }, []);
 
@@ -136,7 +203,7 @@ export function App() {
     setSaveStatus("saving…");
     const response = await sendMessage<{ success: boolean; error?: string }>({
       type: "saveAccomplishment",
-      items: [note]
+      items: [note],
     });
     if (!response?.success) {
       setSaveStatus(response?.error ?? "could not save yet");
@@ -159,7 +226,7 @@ export function App() {
     setIntervalStatus("saving…");
     const response = await sendMessage<{ success: boolean; minutes: number }>({
       type: "updateInterval",
-      minutes: intervalMinutes
+      minutes: intervalMinutes,
     });
     if (!response?.success) {
       setIntervalStatus("could not update interval");
@@ -173,32 +240,40 @@ export function App() {
   const handleExportJson = async () => {
     setExportBusy(true);
     const data = await storageGet<{ entries?: EntriesByDay }>(["entries"]);
-    triggerDownload(`accomplishments-${todayKey()}.json`, JSON.stringify(data.entries ?? {}, null, 2), "application/json");
+    triggerDownload(
+      `accomplishments-${todayKey()}.json`,
+      JSON.stringify(data.entries ?? {}, null, 2),
+      "application/json"
+    );
     setExportBusy(false);
   };
 
   const handleExportCsv = async () => {
     setExportBusy(true);
-    const { entries: storedEntries = {} as EntriesByDay } = await storageGet<{ entries?: EntriesByDay }>([
-      "entries"
-    ]);
+    const { entries: storedEntries = {} as EntriesByDay } = await storageGet<{
+      entries?: EntriesByDay;
+    }>(["entries"]);
     const rows = [["date", "time", "note"]];
     Object.entries(storedEntries).forEach(([date, daily]) => {
       daily.forEach((entry) => {
         const time = new Date(entry.timestamp).toLocaleTimeString([], {
           hour: "numeric",
-          minute: "2-digit"
+          minute: "2-digit",
         });
         rows.push([date, time, entry.note.replace(/"/g, '""')]);
       });
     });
-    const csv = rows.map((cols) => cols.map((col) => `"${col}"`).join(",")).join("\r\n");
+    const csv = rows
+      .map((cols) => cols.map((col) => `"${col}"`).join(","))
+      .join("\r\n");
     triggerDownload(`accomplishments-${todayKey()}.csv`, csv, "text/csv");
     setExportBusy(false);
   };
 
   const handleReset = async () => {
-    const confirmed = window.confirm("reset every saved accomplishment? this cannot be undone.");
+    const confirmed = window.confirm(
+      "reset every saved accomplishment? this cannot be undone."
+    );
     if (!confirmed) return;
     setExportBusy(true);
     await sendMessage({ type: "resetEntries" });
@@ -213,39 +288,33 @@ export function App() {
   const todaysEntries = useMemo(() => entries, [entries]);
 
   const panes = [
-    (
-      <AccomplishmentList
-        key="logs"
-        entries={todaysEntries}
-        draft={draft}
-        onDraftChange={setDraft}
-        onSave={handleSaveEntry}
-        saving={savingEntry}
-        status={saveStatus}
-        celebration={celebration}
-      />
-    ),
-    (
-      <ReminderSettings
-        key="reminders"
-        interval={intervalMinutes}
-        onIntervalChange={setIntervalMinutes}
-        onSave={handleSaveInterval}
-        onOpenReminder={handleOpenReminder}
-        status={intervalStatus}
-        saving={savingInterval}
-        nextReminder={nextReminder}
-      />
-    ),
-    (
-      <ExportButtons
-        key="exports"
-        onExportJson={handleExportJson}
-        onExportCsv={handleExportCsv}
-        onReset={handleReset}
-        busy={exportBusy}
-      />
-    )
+    <AccomplishmentList
+      key="logs"
+      entries={todaysEntries}
+      draft={draft}
+      onDraftChange={setDraft}
+      onSave={handleSaveEntry}
+      saving={savingEntry}
+      status={saveStatus}
+      celebration={celebration}
+    />,
+    <ReminderSettings
+      key="reminders"
+      interval={intervalMinutes}
+      onIntervalChange={setIntervalMinutes}
+      onSave={handleSaveInterval}
+      onOpenReminder={handleOpenReminder}
+      status={intervalStatus}
+      saving={savingInterval}
+      nextReminder={nextReminder}
+    />,
+    <ExportButtons
+      key="exports"
+      onExportJson={handleExportJson}
+      onExportCsv={handleExportCsv}
+      onReset={handleReset}
+      busy={exportBusy}
+    />,
   ];
 
   const maxStep = panes.length - 1;
@@ -256,8 +325,22 @@ export function App() {
   return (
     <div className="layout font-sans text-ink">
       <header className="header-block">
-        <h1>🍅 tomatoh</h1>
+        <h1 className="header-title">🍅 tomatoh</h1>
         <p>notice and account your tasks</p>
+        <button
+          type="button"
+          className="light-dark-toggle"
+          onClick={toggleDarkMode}
+          aria-label={
+            isDarkMode ? "switch to light mode" : "switch to dark mode"
+          }
+        >
+          {isDarkMode ? (
+            <Moon className="h-5 w-5" aria-hidden />
+          ) : (
+            <Sun className="h-5 w-5" aria-hidden />
+          )}
+        </button>
       </header>
       <div className="pin-grid">
         <AnimatePresence mode="wait">
@@ -287,7 +370,12 @@ export function App() {
             <button
               key={item.id}
               type="button"
-              className={index === step ? "nav-item nav-item-active" : "nav-item"}
+              className={
+                index === step ? "nav-item nav-item-active" : "nav-item"
+              }
+              style={{
+                color: "var(--muted)",
+              }}
               onClick={() => setStep(index)}
               aria-label={item.label}
             >

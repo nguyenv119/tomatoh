@@ -105,6 +105,34 @@ header-title {
   text-transform: lowercase;
 }
 
+.snooze-toggle {
+  position: absolute;
+  top: 0;
+  right: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease,
+    border-color 140ms ease;
+}
+
+.snooze-toggle:hover {
+  transform: translateY(-1px);
+  background: var(--accent-soft);
+  border-color: var(--ink);
+}
+
+.snooze-toggle:active {
+  transform: translateY(0);
+}
+
 .light-dark-toggle {
   position: absolute;
   top: 0;

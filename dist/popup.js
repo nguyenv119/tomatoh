@@ -31674,12 +31674,52 @@ var init_createLucideIcon = __esm({
   }
 });
 
+// node_modules/lucide-react/dist/esm/icons/bell-off.js
+var __iconNode, BellOff;
+var init_bell_off = __esm({
+  "node_modules/lucide-react/dist/esm/icons/bell-off.js"() {
+    init_createLucideIcon();
+    __iconNode = [
+      ["path", { d: "M10.268 21a2 2 0 0 0 3.464 0", key: "vwvbt9" }],
+      [
+        "path",
+        {
+          d: "M17 17H4a1 1 0 0 1-.74-1.673C4.59 13.956 6 12.499 6 8a6 6 0 0 1 .258-1.742",
+          key: "178tsu"
+        }
+      ],
+      ["path", { d: "m2 2 20 20", key: "1ooewy" }],
+      ["path", { d: "M8.668 3.01A6 6 0 0 1 18 8c0 2.687.77 4.653 1.707 6.05", key: "1hqiys" }]
+    ];
+    BellOff = createLucideIcon("bell-off", __iconNode);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/bell.js
+var __iconNode2, Bell;
+var init_bell = __esm({
+  "node_modules/lucide-react/dist/esm/icons/bell.js"() {
+    init_createLucideIcon();
+    __iconNode2 = [
+      ["path", { d: "M10.268 21a2 2 0 0 0 3.464 0", key: "vwvbt9" }],
+      [
+        "path",
+        {
+          d: "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326",
+          key: "11g9vi"
+        }
+      ]
+    ];
+    Bell = createLucideIcon("bell", __iconNode2);
+  }
+});
+
 // node_modules/lucide-react/dist/esm/icons/file-json.js
-var __iconNode, FileJson;
+var __iconNode3, FileJson;
 var init_file_json = __esm({
   "node_modules/lucide-react/dist/esm/icons/file-json.js"() {
     init_createLucideIcon();
-    __iconNode = [
+    __iconNode3 = [
       ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
       ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
       [
@@ -31691,16 +31731,16 @@ var init_file_json = __esm({
         { d: "M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1", key: "mpwhp6" }
       ]
     ];
-    FileJson = createLucideIcon("file-json", __iconNode);
+    FileJson = createLucideIcon("file-json", __iconNode3);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/moon.js
-var __iconNode2, Moon;
+var __iconNode4, Moon;
 var init_moon = __esm({
   "node_modules/lucide-react/dist/esm/icons/moon.js"() {
     init_createLucideIcon();
-    __iconNode2 = [
+    __iconNode4 = [
       [
         "path",
         {
@@ -31709,16 +31749,16 @@ var init_moon = __esm({
         }
       ]
     ];
-    Moon = createLucideIcon("moon", __iconNode2);
+    Moon = createLucideIcon("moon", __iconNode4);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/play.js
-var __iconNode3, Play;
+var __iconNode5, Play;
 var init_play = __esm({
   "node_modules/lucide-react/dist/esm/icons/play.js"() {
     init_createLucideIcon();
-    __iconNode3 = [
+    __iconNode5 = [
       [
         "path",
         {
@@ -31727,31 +31767,31 @@ var init_play = __esm({
         }
       ]
     ];
-    Play = createLucideIcon("play", __iconNode3);
+    Play = createLucideIcon("play", __iconNode5);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/refresh-ccw.js
-var __iconNode4, RefreshCcw;
+var __iconNode6, RefreshCcw;
 var init_refresh_ccw = __esm({
   "node_modules/lucide-react/dist/esm/icons/refresh-ccw.js"() {
     init_createLucideIcon();
-    __iconNode4 = [
+    __iconNode6 = [
       ["path", { d: "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "14sxne" }],
       ["path", { d: "M3 3v5h5", key: "1xhq8a" }],
       ["path", { d: "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16", key: "1hlbsb" }],
       ["path", { d: "M16 16h5v5", key: "ccwih5" }]
     ];
-    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode4);
+    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode6);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/sun.js
-var __iconNode5, Sun;
+var __iconNode7, Sun;
 var init_sun = __esm({
   "node_modules/lucide-react/dist/esm/icons/sun.js"() {
     init_createLucideIcon();
-    __iconNode5 = [
+    __iconNode7 = [
       ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
       ["path", { d: "M12 2v2", key: "tus03m" }],
       ["path", { d: "M12 20v2", key: "1lh1kg" }],
@@ -31762,13 +31802,15 @@ var init_sun = __esm({
       ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
       ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
     ];
-    Sun = createLucideIcon("sun", __iconNode5);
+    Sun = createLucideIcon("sun", __iconNode7);
   }
 });
 
 // node_modules/lucide-react/dist/esm/lucide-react.js
 var init_lucide_react = __esm({
   "node_modules/lucide-react/dist/esm/lucide-react.js"() {
+    init_bell_off();
+    init_bell();
     init_file_json();
     init_moon();
     init_play();
@@ -32164,22 +32206,78 @@ var init_useDarkMode = __esm({
   }
 });
 
+// src/lib/useSnooze.ts
+function useSnooze(options) {
+  const [isSnoozed, setIsSnoozed] = (0, import_react28.useState)(false);
+  (0, import_react28.useEffect)(() => {
+    const loadSnooze = async () => {
+      if (chromeApi?.storage?.local) {
+        const result = await storageGet(["isSnoozed"]);
+        if (result.isSnoozed !== void 0) {
+          setIsSnoozed(result.isSnoozed);
+        }
+      } else {
+        const saved = localStorage.getItem("isSnoozed");
+        if (saved !== null) {
+          const isSnoozedValue = saved === "true";
+          setIsSnoozed(isSnoozedValue);
+        }
+      }
+    };
+    loadSnooze();
+    if (options?.listenToStorage && chromeApi?.storage?.onChanged) {
+      const handleStorageChange = (changes, areaName) => {
+        if (areaName !== "local") return;
+        if (changes.isSnoozed) {
+          const newValue = changes.isSnoozed.newValue ?? false;
+          setIsSnoozed(newValue);
+        }
+      };
+      chromeApi.storage.onChanged.addListener(handleStorageChange);
+      return () => {
+        chromeApi.storage.onChanged.removeListener(handleStorageChange);
+      };
+    }
+  }, [options?.listenToStorage]);
+  const toggleSnooze = async () => {
+    const newValue = !isSnoozed;
+    setIsSnoozed(newValue);
+    if (chromeApi?.storage?.local) {
+      await new Promise((resolve) => {
+        chromeApi.storage.local.set({ isSnoozed: newValue }, () => resolve());
+      });
+    } else {
+      localStorage.setItem("isSnoozed", String(newValue));
+    }
+  };
+  return { isSnoozed, toggleSnooze };
+}
+var import_react28;
+var init_useSnooze = __esm({
+  "src/lib/useSnooze.ts"() {
+    "use strict";
+    import_react28 = __toESM(require_react());
+    init_chrome();
+  }
+});
+
 // src/popup/App.tsx
 function App() {
-  const [entries, setEntries] = (0, import_react28.useState)([]);
-  const [draft, setDraft] = (0, import_react28.useState)("");
-  const [intervalMinutes, setIntervalMinutes] = (0, import_react28.useState)(15);
-  const [saveStatus, setSaveStatus] = (0, import_react28.useState)(null);
-  const [intervalStatus, setIntervalStatus] = (0, import_react28.useState)(null);
-  const [exportBusy, setExportBusy] = (0, import_react28.useState)(false);
-  const [nextReminder, setNextReminder] = (0, import_react28.useState)(
+  const [entries, setEntries] = (0, import_react29.useState)([]);
+  const [draft, setDraft] = (0, import_react29.useState)("");
+  const [intervalMinutes, setIntervalMinutes] = (0, import_react29.useState)(15);
+  const [saveStatus, setSaveStatus] = (0, import_react29.useState)(null);
+  const [intervalStatus, setIntervalStatus] = (0, import_react29.useState)(null);
+  const [exportBusy, setExportBusy] = (0, import_react29.useState)(false);
+  const [nextReminder, setNextReminder] = (0, import_react29.useState)(
     "loading reminder schedule\u2026"
   );
-  const [savingEntry, setSavingEntry] = (0, import_react28.useState)(false);
-  const [savingInterval, setSavingInterval] = (0, import_react28.useState)(false);
-  const [celebration, setCelebration] = (0, import_react28.useState)(false);
-  const [step, setStep] = (0, import_react28.useState)(0);
+  const [savingEntry, setSavingEntry] = (0, import_react29.useState)(false);
+  const [savingInterval, setSavingInterval] = (0, import_react29.useState)(false);
+  const [celebration, setCelebration] = (0, import_react29.useState)(false);
+  const [step, setStep] = (0, import_react29.useState)(0);
   const { isDarkMode, toggleDarkMode } = useDarkMode({ listenToStorage: true });
+  const { isSnoozed, toggleSnooze } = useSnooze({ listenToStorage: true });
   const loadEntries = async () => {
     const key = todayKey();
     const { entries: storedEntries = {} } = await storageGet(["entries"]);
@@ -32216,7 +32314,7 @@ function App() {
     });
     setNextReminder(`next in ${minutes}m ${seconds}s \xB7 about ${readable}`);
   };
-  (0, import_react28.useEffect)(() => {
+  (0, import_react29.useEffect)(() => {
     loadEntries();
     loadInterval();
     refreshNextReminder();
@@ -32322,7 +32420,10 @@ function App() {
   const handleOpenReminder = async () => {
     await sendMessage({ type: "openReminder" });
   };
-  const todaysEntries = (0, import_react28.useMemo)(() => entries, [entries]);
+  const handleSnooze = () => {
+    toggleSnooze();
+  };
+  const todaysEntries = (0, import_react29.useMemo)(() => entries, [entries]);
   const panes = [
     /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
       AccomplishmentList,
@@ -32369,6 +32470,16 @@ function App() {
         "button",
         {
           type: "button",
+          className: "snooze-toggle",
+          onClick: handleSnooze,
+          "aria-label": isSnoozed ? "disable snooze" : "enable snooze",
+          children: isSnoozed ? /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(BellOff, { className: "h-5 w-5", "aria-hidden": true }) : /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Bell, { className: "h-5 w-5", "aria-hidden": true })
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(
+        "button",
+        {
+          type: "button",
           className: "light-dark-toggle",
           onClick: toggleDarkMode,
           "aria-label": isDarkMode ? "switch to light mode" : "switch to dark mode",
@@ -32403,17 +32514,18 @@ function App() {
     )) }) })
   ] });
 }
-var import_react28, import_jsx_runtime13, navItems;
+var import_react29, import_jsx_runtime13, navItems;
 var init_App = __esm({
   "src/popup/App.tsx"() {
     "use strict";
-    import_react28 = __toESM(require_react());
+    import_react29 = __toESM(require_react());
     init_es3();
     init_lucide_react();
     init_ReminderSettings();
     init_ExportButtons();
     init_chrome();
     init_useDarkMode();
+    init_useSnooze();
     init_AccomplishmentList();
     import_jsx_runtime13 = __toESM(require_jsx_runtime());
     navItems = [
@@ -32427,7 +32539,7 @@ var init_App = __esm({
 // src/popup/index.tsx
 var require_index = __commonJS({
   "src/popup/index.tsx"() {
-    var import_react29 = __toESM(require_react());
+    var import_react30 = __toESM(require_react());
     var import_client = __toESM(require_client());
     init_App();
     var import_jsx_runtime14 = __toESM(require_jsx_runtime());
@@ -32501,6 +32613,8 @@ lucide-react/dist/esm/shared/src/utils.js:
 lucide-react/dist/esm/defaultAttributes.js:
 lucide-react/dist/esm/Icon.js:
 lucide-react/dist/esm/createLucideIcon.js:
+lucide-react/dist/esm/icons/bell-off.js:
+lucide-react/dist/esm/icons/bell.js:
 lucide-react/dist/esm/icons/file-json.js:
 lucide-react/dist/esm/icons/moon.js:
 lucide-react/dist/esm/icons/play.js:

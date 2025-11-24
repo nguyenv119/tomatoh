@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Bell, BellOff } from "lucide-react";
 import { ReminderSettings } from "../components/ReminderSettings";
 import { ExportButtons } from "../components/ExportButtons";
 import {
@@ -14,6 +14,7 @@ import {
   triggerDownload,
 } from "../lib/chrome";
 import { useDarkMode } from "../lib/useDarkMode";
+import { useSnooze } from "../lib/useSnooze";
 import {
   AccomplishmentList,
   type AccomplishmentEntry,
@@ -40,7 +41,8 @@ export function App() {
   const [celebration, setCelebration] = useState(false);
   const [step, setStep] = useState(0);
   const { isDarkMode, toggleDarkMode } = useDarkMode({ listenToStorage: true });
-
+  const { isSnoozed, toggleSnooze } = useSnooze({ listenToStorage: true });
+  
   const loadEntries = async () => {
     const key = todayKey();
     const { entries: storedEntries = {} as EntriesByDay } = await storageGet<{
@@ -216,6 +218,10 @@ export function App() {
     await sendMessage({ type: "openReminder" });
   };
 
+  const handleSnooze = () => {
+    toggleSnooze();
+  };
+
   const todaysEntries = useMemo(() => entries, [entries]);
 
   const panes = [
@@ -253,6 +259,18 @@ export function App() {
       <header className="header-block">
         <h1 className="header-title">🍅 tomatoh</h1>
         <p>notice and account your tasks</p>
+        <button
+          type="button"
+          className="snooze-toggle"
+          onClick={handleSnooze}
+          aria-label={isSnoozed ? "disable snooze" : "enable snooze"}
+        >
+          {isSnoozed ? (
+            <BellOff className="h-5 w-5" aria-hidden />
+          ) : (
+            <Bell className="h-5 w-5" aria-hidden />
+          )}
+        </button>
         <button
           type="button"
           className="light-dark-toggle"

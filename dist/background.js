@@ -211,8 +211,13 @@ const resetEntries = async () => storageSet({ entries: {} });
 chrome.runtime.onInstalled.addListener(() => ensureInitialized());
 chrome.runtime.onStartup.addListener(() => ensureInitialized());
 
-chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm.name === ALARM_NAME) openReminderWindow();
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name === ALARM_NAME) {
+    const { isSnoozed } = await storageGet(["isSnoozed"]);
+    if (!isSnoozed) {
+      openReminderWindow();
+    }
+  }
 });
 
 chrome.windows.onRemoved.addListener((windowId) => {

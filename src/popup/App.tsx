@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Sun, Moon, Bell, BellOff } from "lucide-react";
+import { Sun, Moon, Bell, BellOff, PenLine, Clock, Download } from "lucide-react";
 import { ReminderSettings } from "../components/ReminderSettings";
 import { ExportButtons } from "../components/ExportButtons";
 import {
@@ -21,9 +21,9 @@ import {
 } from "../components/AccomplishmentList";
 
 const navItems = [
-  { id: 0, icon: "📝", label: "log" },
-  { id: 1, icon: "⏱", label: "reminders" },
-  { id: 2, icon: "📤", label: "exports" },
+  { id: 0, Icon: PenLine, label: "log" },
+  { id: 1, Icon: Clock, label: "reminders" },
+  { id: 2, Icon: Download, label: "exports" },
 ];
 
 export function App() {
@@ -309,9 +309,7 @@ export function App() {
               onClick={() => setStep(index)}
               aria-label={item.label}
             >
-              <span className="nav-icon" aria-hidden>
-                {item.icon}
-              </span>
+              <item.Icon className="nav-icon h-4 w-4" aria-hidden />
               <span className="nav-label">{item.label}</span>
             </button>
           ))}

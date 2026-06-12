@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { RefreshCcw, FileJson } from "lucide-react";
+import { RefreshCcw, FileJson, FileSpreadsheet, Download } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -21,10 +21,11 @@ export function ExportButtons({ onExportJson, onExportCsv, onReset, busy }: Expo
     >
       <Card>
         <CardHeader>
-          <CardTitle>exports + reset</CardTitle>
-          <CardDescription>
-            download the day’s notes or clear the slate.
-          </CardDescription>
+          <CardTitle className="title-row">
+            <Download className="h-4 w-4" aria-hidden />
+            exports
+          </CardTitle>
+          <CardDescription>download your notes or clear the slate</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="button-stack">
@@ -33,7 +34,7 @@ export function ExportButtons({ onExportJson, onExportCsv, onReset, busy }: Expo
               export json
             </Button>
             <Button variant="secondary" onClick={onExportCsv} disabled={busy}>
-              <FileJson className="h-4 w-4" aria-hidden />
+              <FileSpreadsheet className="h-4 w-4" aria-hidden />
               export csv
             </Button>
             <Button variant="secondary" onClick={onReset} disabled={busy}>

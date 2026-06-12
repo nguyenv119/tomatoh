@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { Play, Save, Clock } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -33,7 +33,10 @@ export function ReminderSettings({
     >
       <Card>
         <CardHeader>
-          <CardTitle>⏲️ reminders</CardTitle>
+          <CardTitle className="title-row">
+            <Clock className="h-4 w-4" aria-hidden />
+            reminders
+          </CardTitle>
           <CardDescription>
             choose how often the bell nudges you
           </CardDescription>
@@ -54,7 +57,8 @@ export function ReminderSettings({
             <div className="cta-row">
               <span className="status-text">{status}</span>
               <Button onClick={onSave} disabled={saving} className="btn-sm">
-                {saving ? "🧭 saving…" : "🧭 save interval"}
+                <Save className="h-4 w-4" aria-hidden />
+                {saving ? "saving…" : "save"}
               </Button>
             </div>
           </div>

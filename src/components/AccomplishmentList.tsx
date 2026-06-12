@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "./ui/card";
+import { Plus, Sparkles } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 
@@ -43,11 +44,15 @@ export function AccomplishmentList({
       className="stagger-offset"
     >
       <Card>
+        <CardHeader>
+          <CardTitle>today</CardTitle>
+          <CardDescription>jot what you’re working on</CardDescription>
+        </CardHeader>
         <CardContent>
           <div className="input-group">
             <Textarea
               id="highlight"
-              placeholder="write something…✍️✍️✍️"
+              placeholder="write something…"
               value={draft}
               rows={3}
               ref={textareaRef}
@@ -56,13 +61,14 @@ export function AccomplishmentList({
             <div className="cta-row">
               <span className="status-text">{status}</span>
               <Button onClick={onSave} disabled={saving} className="btn-sm">
-                {saving ? "📝 logging…" : "📝 log event"}
+                <Plus className="h-4 w-4" aria-hidden />
+                {saving ? "logging…" : "log"}
               </Button>
             </div>
           </div>
           <div className="entries-stack">
             {entries.length === 0 ? (
-              <p className="pin-empty">no pins yet</p>
+              <p className="pin-empty">nothing logged yet</p>
             ) : (
               entries.map((entry) => (
                 <motion.article
@@ -84,7 +90,16 @@ export function AccomplishmentList({
             )}
           </div>
         </CardContent>
-        {celebration ? <motion.div className="confetti-burst">✨✨✨✨✨</motion.div> : null}
+        {celebration ? (
+          <motion.div
+            className="confetti-burst"
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <Sparkles className="h-4 w-4" aria-hidden />
+          </motion.div>
+        ) : null}
       </Card>
     </motion.div>
   );

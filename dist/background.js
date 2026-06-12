@@ -152,8 +152,10 @@ const getTodayKey = () => new Date().toISOString().split("T")[0];
 const openReminderWindow = async () => {
   const existingWindowId = await resolveActiveReminderWindowId();
   if (typeof existingWindowId === "number") {
+    // Don't steal focus: surface the existing window without yanking the user
+    // out of whatever native app they're in.
     const reused = await ensureReminderWindowBounds(existingWindowId, {
-      focus: true,
+      focus: false,
     });
     if (reused) return;
     await setActiveReminderWindowId(null);
@@ -163,7 +165,7 @@ const openReminderWindow = async () => {
   const createdWindow = await chrome.windows.create({
     url,
     type: "popup",
-    focused: true,
+    focused: false,
     width: PROMPT_WINDOW_SIZE.width,
     height: PROMPT_WINDOW_SIZE.height,
     state: "normal",
@@ -175,7 +177,7 @@ const openReminderWindow = async () => {
   if (createdWindowId !== null) {
     await setActiveReminderWindowId(createdWindowId);
     const resized = await ensureReminderWindowBounds(createdWindowId, {
-      focus: true,
+      focus: false,
     });
     if (!resized) await setActiveReminderWindowId(null);
   } else {

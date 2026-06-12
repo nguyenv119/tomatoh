@@ -31714,12 +31714,39 @@ var init_bell = __esm({
   }
 });
 
+// node_modules/lucide-react/dist/esm/icons/clock.js
+var __iconNode3, Clock;
+var init_clock = __esm({
+  "node_modules/lucide-react/dist/esm/icons/clock.js"() {
+    init_createLucideIcon();
+    __iconNode3 = [
+      ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }],
+      ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
+    ];
+    Clock = createLucideIcon("clock", __iconNode3);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/download.js
+var __iconNode4, Download;
+var init_download = __esm({
+  "node_modules/lucide-react/dist/esm/icons/download.js"() {
+    init_createLucideIcon();
+    __iconNode4 = [
+      ["path", { d: "M12 15V3", key: "m9g1x1" }],
+      ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
+      ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
+    ];
+    Download = createLucideIcon("download", __iconNode4);
+  }
+});
+
 // node_modules/lucide-react/dist/esm/icons/file-json.js
-var __iconNode3, FileJson;
+var __iconNode5, FileJson;
 var init_file_json = __esm({
   "node_modules/lucide-react/dist/esm/icons/file-json.js"() {
     init_createLucideIcon();
-    __iconNode3 = [
+    __iconNode5 = [
       ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
       ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
       [
@@ -31731,16 +31758,33 @@ var init_file_json = __esm({
         { d: "M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1", key: "mpwhp6" }
       ]
     ];
-    FileJson = createLucideIcon("file-json", __iconNode3);
+    FileJson = createLucideIcon("file-json", __iconNode5);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/file-spreadsheet.js
+var __iconNode6, FileSpreadsheet;
+var init_file_spreadsheet = __esm({
+  "node_modules/lucide-react/dist/esm/icons/file-spreadsheet.js"() {
+    init_createLucideIcon();
+    __iconNode6 = [
+      ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z", key: "1rqfz7" }],
+      ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4", key: "tnqrlb" }],
+      ["path", { d: "M8 13h2", key: "yr2amv" }],
+      ["path", { d: "M14 13h2", key: "un5t4a" }],
+      ["path", { d: "M8 17h2", key: "2yhykz" }],
+      ["path", { d: "M14 17h2", key: "10kma7" }]
+    ];
+    FileSpreadsheet = createLucideIcon("file-spreadsheet", __iconNode6);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/moon.js
-var __iconNode4, Moon;
+var __iconNode7, Moon;
 var init_moon = __esm({
   "node_modules/lucide-react/dist/esm/icons/moon.js"() {
     init_createLucideIcon();
-    __iconNode4 = [
+    __iconNode7 = [
       [
         "path",
         {
@@ -31749,16 +31793,35 @@ var init_moon = __esm({
         }
       ]
     ];
-    Moon = createLucideIcon("moon", __iconNode4);
+    Moon = createLucideIcon("moon", __iconNode7);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/pen-line.js
+var __iconNode8, PenLine;
+var init_pen_line = __esm({
+  "node_modules/lucide-react/dist/esm/icons/pen-line.js"() {
+    init_createLucideIcon();
+    __iconNode8 = [
+      ["path", { d: "M13 21h8", key: "1jsn5i" }],
+      [
+        "path",
+        {
+          d: "M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",
+          key: "1a8usu"
+        }
+      ]
+    ];
+    PenLine = createLucideIcon("pen-line", __iconNode8);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/play.js
-var __iconNode5, Play;
+var __iconNode9, Play;
 var init_play = __esm({
   "node_modules/lucide-react/dist/esm/icons/play.js"() {
     init_createLucideIcon();
-    __iconNode5 = [
+    __iconNode9 = [
       [
         "path",
         {
@@ -31767,31 +31830,85 @@ var init_play = __esm({
         }
       ]
     ];
-    Play = createLucideIcon("play", __iconNode5);
+    Play = createLucideIcon("play", __iconNode9);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/plus.js
+var __iconNode10, Plus;
+var init_plus = __esm({
+  "node_modules/lucide-react/dist/esm/icons/plus.js"() {
+    init_createLucideIcon();
+    __iconNode10 = [
+      ["path", { d: "M5 12h14", key: "1ays0h" }],
+      ["path", { d: "M12 5v14", key: "s699le" }]
+    ];
+    Plus = createLucideIcon("plus", __iconNode10);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/refresh-ccw.js
-var __iconNode6, RefreshCcw;
+var __iconNode11, RefreshCcw;
 var init_refresh_ccw = __esm({
   "node_modules/lucide-react/dist/esm/icons/refresh-ccw.js"() {
     init_createLucideIcon();
-    __iconNode6 = [
+    __iconNode11 = [
       ["path", { d: "M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "14sxne" }],
       ["path", { d: "M3 3v5h5", key: "1xhq8a" }],
       ["path", { d: "M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16", key: "1hlbsb" }],
       ["path", { d: "M16 16h5v5", key: "ccwih5" }]
     ];
-    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode6);
+    RefreshCcw = createLucideIcon("refresh-ccw", __iconNode11);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/save.js
+var __iconNode12, Save;
+var init_save = __esm({
+  "node_modules/lucide-react/dist/esm/icons/save.js"() {
+    init_createLucideIcon();
+    __iconNode12 = [
+      [
+        "path",
+        {
+          d: "M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z",
+          key: "1c8476"
+        }
+      ],
+      ["path", { d: "M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7", key: "1ydtos" }],
+      ["path", { d: "M7 3v4a1 1 0 0 0 1 1h7", key: "t51u73" }]
+    ];
+    Save = createLucideIcon("save", __iconNode12);
+  }
+});
+
+// node_modules/lucide-react/dist/esm/icons/sparkles.js
+var __iconNode13, Sparkles;
+var init_sparkles = __esm({
+  "node_modules/lucide-react/dist/esm/icons/sparkles.js"() {
+    init_createLucideIcon();
+    __iconNode13 = [
+      [
+        "path",
+        {
+          d: "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z",
+          key: "1s2grr"
+        }
+      ],
+      ["path", { d: "M20 2v4", key: "1rf3ol" }],
+      ["path", { d: "M22 4h-4", key: "gwowj6" }],
+      ["circle", { cx: "4", cy: "20", r: "2", key: "6kqj1y" }]
+    ];
+    Sparkles = createLucideIcon("sparkles", __iconNode13);
   }
 });
 
 // node_modules/lucide-react/dist/esm/icons/sun.js
-var __iconNode7, Sun;
+var __iconNode14, Sun;
 var init_sun = __esm({
   "node_modules/lucide-react/dist/esm/icons/sun.js"() {
     init_createLucideIcon();
-    __iconNode7 = [
+    __iconNode14 = [
       ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
       ["path", { d: "M12 2v2", key: "tus03m" }],
       ["path", { d: "M12 20v2", key: "1lh1kg" }],
@@ -31802,19 +31919,26 @@ var init_sun = __esm({
       ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
       ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
     ];
-    Sun = createLucideIcon("sun", __iconNode7);
+    Sun = createLucideIcon("sun", __iconNode14);
   }
 });
 
 // node_modules/lucide-react/dist/esm/lucide-react.js
 var init_lucide_react = __esm({
   "node_modules/lucide-react/dist/esm/lucide-react.js"() {
+    init_pen_line();
+    init_sparkles();
     init_bell_off();
     init_bell();
+    init_clock();
+    init_download();
     init_file_json();
+    init_file_spreadsheet();
     init_moon();
     init_play();
+    init_plus();
     init_refresh_ccw();
+    init_save();
     init_sun();
   }
 });
@@ -31912,7 +32036,10 @@ function ReminderSettings({
       className: "stagger-offset",
       children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Card, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(CardHeader, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CardTitle, { children: "\u23F2\uFE0F reminders" }),
+          /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(CardTitle, { className: "title-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Clock, { className: "h-4 w-4", "aria-hidden": true }),
+            "reminders"
+          ] }),
           /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(CardDescription, { children: "choose how often the bell nudges you" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(CardContent, { children: [
@@ -31931,7 +32058,10 @@ function ReminderSettings({
             ),
             /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "cta-row", children: [
               /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "status-text", children: status }),
-              /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F9ED} saving\u2026" : "\u{1F9ED} save interval" })
+              /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Save, { className: "h-4 w-4", "aria-hidden": true }),
+                saving ? "saving\u2026" : "save"
+              ] })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "soft-banner", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "flex items-center justify-between gap-3", children: [
@@ -31978,8 +32108,11 @@ function ExportButtons({ onExportJson, onExportCsv, onReset, busy }) {
       className: "stagger-offset",
       children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Card, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(CardHeader, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CardTitle, { children: "exports + reset" }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CardDescription, { children: "download the day\u2019s notes or clear the slate." })
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(CardTitle, { className: "title-row", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Download, { className: "h-4 w-4", "aria-hidden": true }),
+            "exports"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CardDescription, { children: "download your notes or clear the slate" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "button-stack", children: [
           /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Button, { variant: "secondary", onClick: onExportJson, disabled: busy, children: [
@@ -31987,7 +32120,7 @@ function ExportButtons({ onExportJson, onExportCsv, onReset, busy }) {
             "export json"
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Button, { variant: "secondary", onClick: onExportCsv, disabled: busy, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(FileJson, { className: "h-4 w-4", "aria-hidden": true }),
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(FileSpreadsheet, { className: "h-4 w-4", "aria-hidden": true }),
             "export csv"
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Button, { variant: "secondary", onClick: onReset, disabled: busy, children: [
@@ -32049,13 +32182,17 @@ function AccomplishmentList({
       transition: { duration: 0.35 },
       className: "stagger-offset",
       children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Card, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(CardHeader, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardTitle, { children: "today" }),
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(CardDescription, { children: "jot what you\u2019re working on" })
+        ] }),
         /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(CardContent, { children: [
           /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "input-group", children: [
             /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
               Textarea,
               {
                 id: "highlight",
-                placeholder: "write something\u2026\u270D\uFE0F\u270D\uFE0F\u270D\uFE0F",
+                placeholder: "write something\u2026",
                 value: draft,
                 rows: 3,
                 ref: textareaRef,
@@ -32064,10 +32201,13 @@ function AccomplishmentList({
             ),
             /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { className: "cta-row", children: [
               /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("span", { className: "status-text", children: status }),
-              /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: saving ? "\u{1F4DD} logging\u2026" : "\u{1F4DD} log event" })
+              /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Button, { onClick: onSave, disabled: saving, className: "btn-sm", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Plus, { className: "h-4 w-4", "aria-hidden": true }),
+                saving ? "logging\u2026" : "log"
+              ] })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "entries-stack", children: entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "pin-empty", children: "no pins yet" }) : entries.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "entries-stack", children: entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "pin-empty", children: "nothing logged yet" }) : entries.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
             motion.article,
             {
               initial: { opacity: 0, y: 14 },
@@ -32085,7 +32225,16 @@ function AccomplishmentList({
             entry.timestamp
           )) })
         ] }),
-        celebration ? /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(motion.div, { className: "confetti-burst", children: "\u2728\u2728\u2728\u2728\u2728" }) : null
+        celebration ? /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+          motion.div,
+          {
+            className: "confetti-burst",
+            initial: { opacity: 0, scale: 0.6 },
+            animate: { opacity: 1, scale: 1 },
+            exit: { opacity: 0 },
+            children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Sparkles, { className: "h-4 w-4", "aria-hidden": true })
+          }
+        ) : null
       ] })
     }
   );
@@ -32096,6 +32245,7 @@ var init_AccomplishmentList = __esm({
     "use strict";
     import_react26 = __toESM(require_react());
     init_es3();
+    init_lucide_react();
     init_card();
     init_button();
     init_textarea();
@@ -32506,7 +32656,7 @@ function App() {
         onClick: () => setStep(index),
         "aria-label": item.label,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-icon", "aria-hidden": true, children: item.icon }),
+          /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(item.Icon, { className: "nav-icon h-4 w-4", "aria-hidden": true }),
           /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("span", { className: "nav-label", children: item.label })
         ]
       },
@@ -32529,9 +32679,9 @@ var init_App = __esm({
     init_AccomplishmentList();
     import_jsx_runtime13 = __toESM(require_jsx_runtime());
     navItems = [
-      { id: 0, icon: "\u{1F4DD}", label: "log" },
-      { id: 1, icon: "\u23F1", label: "reminders" },
-      { id: 2, icon: "\u{1F4E4}", label: "exports" }
+      { id: 0, Icon: PenLine, label: "log" },
+      { id: 1, Icon: Clock, label: "reminders" },
+      { id: 2, Icon: Download, label: "exports" }
     ];
   }
 });
@@ -32615,10 +32765,17 @@ lucide-react/dist/esm/Icon.js:
 lucide-react/dist/esm/createLucideIcon.js:
 lucide-react/dist/esm/icons/bell-off.js:
 lucide-react/dist/esm/icons/bell.js:
+lucide-react/dist/esm/icons/clock.js:
+lucide-react/dist/esm/icons/download.js:
 lucide-react/dist/esm/icons/file-json.js:
+lucide-react/dist/esm/icons/file-spreadsheet.js:
 lucide-react/dist/esm/icons/moon.js:
+lucide-react/dist/esm/icons/pen-line.js:
 lucide-react/dist/esm/icons/play.js:
+lucide-react/dist/esm/icons/plus.js:
 lucide-react/dist/esm/icons/refresh-ccw.js:
+lucide-react/dist/esm/icons/save.js:
+lucide-react/dist/esm/icons/sparkles.js:
 lucide-react/dist/esm/icons/sun.js:
 lucide-react/dist/esm/lucide-react.js:
   (**

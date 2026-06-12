@@ -197,11 +197,21 @@ header-title {
 }
 
 .pin-title {
-  margin: 10px 10px;
+  margin: 10px 10px 2px;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   text-transform: lowercase;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-row svg {
+  opacity: 0.7;
 }
 
 .pin-subtle {
@@ -223,15 +233,21 @@ header-title {
   border-radius: 0.9rem;
   border: 1px solid var(--border);
   background: var(--accent-soft);
-  padding: 15px 15px;
+  padding: 13px 15px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  transition: border-color 140ms ease;
+}
+
+.entry-card:hover {
+  border-color: var(--border-strong);
 }
 
 .entry-time {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--muted);
   text-transform: lowercase;
   display: inline-flex;

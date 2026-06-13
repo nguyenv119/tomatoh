@@ -3,6 +3,7 @@ const ALARM_NAME = "accomplishment-reminder";
 const DEFAULT_INTERVAL_MINUTES = 15;
 const PROMPT_WINDOW_SIZE = { width: 420, height: 520 };
 const ACTIVE_WINDOW_STORAGE_KEY = "activeReminderWindowId";
+const REMINDER_NOTIFICATION_ID = "accomplishment-reminder-nudge";
 
 let activeReminderWindowId = null;
 let isActiveReminderWindowLoaded = false;
@@ -149,13 +150,38 @@ const scheduleReminder = async (minutes) => {
 // ---- Core behavior ----
 const getTodayKey = () => new Date().toISOString().split("T")[0];
 
+// Nudge without stealing OS focus: a system notification surfaces over any
+// app. Clicking it opens the reminder window (an explicit user action), so
+// the window-focus only happens when the user chooses to engage.
+const showReminderNotification = async () => {
+  if (!chrome.notifications) {
+    await openReminderWindow();
+    return;
+  }
+  try {
+    await chrome.notifications.create(REMINDER_NOTIFICATION_ID, {
+      type: "basic",
+      iconUrl: chrome.runtime.getURL("icons/tomatoh.png"),
+      title: "tomatoh",
+      message: "time to log what you’re working on",
+      priority: 2,
+      requireInteraction: true,
+    });
+  } catch (error) {
+    // Notifications unavailable (permission denied, etc.) — fall back to the
+    // window so the reminder isn't silently lost.
+    await openReminderWindow();
+  }
+};
+
 const openReminderWindow = async () => {
+  // Opened only on explicit user action (notification click or the in-app
+  // "open reminder now" button), so focusing the window is the desired
+  // behavior here — the un-prompted nudge is handled by a notification.
   const existingWindowId = await resolveActiveReminderWindowId();
   if (typeof existingWindowId === "number") {
-    // Don't steal focus: surface the existing window without yanking the user
-    // out of whatever native app they're in.
     const reused = await ensureReminderWindowBounds(existingWindowId, {
-      focus: false,
+      focus: true,
     });
     if (reused) return;
     await setActiveReminderWindowId(null);
@@ -165,7 +191,7 @@ const openReminderWindow = async () => {
   const createdWindow = await chrome.windows.create({
     url,
     type: "popup",
-    focused: false,
+    focused: true,
     width: PROMPT_WINDOW_SIZE.width,
     height: PROMPT_WINDOW_SIZE.height,
     state: "normal",
@@ -177,7 +203,7 @@ const openReminderWindow = async () => {
   if (createdWindowId !== null) {
     await setActiveReminderWindowId(createdWindowId);
     const resized = await ensureReminderWindowBounds(createdWindowId, {
-      focus: false,
+      focus: true,
     });
     if (!resized) await setActiveReminderWindowId(null);
   } else {
@@ -217,10 +243,18 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
   if (alarm.name === ALARM_NAME) {
     const { isSnoozed } = await storageGet(["isSnoozed"]);
     if (!isSnoozed) {
-      openReminderWindow();
+      showReminderNotification();
     }
   }
 });
+
+if (chrome.notifications?.onClicked) {
+  chrome.notifications.onClicked.addListener((notificationId) => {
+    if (notificationId !== REMINDER_NOTIFICATION_ID) return;
+    chrome.notifications.clear(REMINDER_NOTIFICATION_ID);
+    openReminderWindow();
+  });
+}
 
 chrome.windows.onRemoved.addListener((windowId) => {
   if (windowId === activeReminderWindowId) {
